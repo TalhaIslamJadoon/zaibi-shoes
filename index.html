@@ -1,0 +1,1092 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
+<meta name="color-scheme" content="light"/>
+<link rel="icon" href="data:,"/>
+<title>Zaibi Shoes — Cantt Chowk, Abbottabad | Demo Website</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f7f5f2;--bg2:#fff;--ink:#14161f;--muted:#5b6070;--line:#e7e2da;--blue:#2563eb;--cyan:#06b6d4;--violet:#7c3aed;--grad:linear-gradient(92deg,#2563eb,#06b6d4 48%,#7c3aed);--card:#fff;--shadow:0 18px 45px rgba(20,22,40,.10);--r:20px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,system-ui,sans-serif;background:var(--bg);color:var(--ink);overflow-x:hidden}
+h1,h2,h3{font-family:Sora,sans-serif;margin:0}a{color:inherit}img{max-width:100%;display:block}
+button,[role=button],select,input,textarea{min-height:40px;font:inherit}
+.wrap{max-width:1180px;margin:0 auto;padding:0 18px}
+.grad-text{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.btn{display:inline-flex;align-items:center;gap:8px;border:0;cursor:pointer;padding:12px 20px;border-radius:999px;font-weight:700;text-decoration:none;min-height:46px;justify-content:center;white-space:nowrap}
+.btn-grad{background:var(--grad);color:#fff;box-shadow:0 12px 28px rgba(37,99,235,.32);position:relative;overflow:hidden}
+.btn-grad::after{content:"";position:absolute;inset:0;background:linear-gradient(110deg,transparent 30%,rgba(255,255,255,.45) 50%,transparent 70%);transform:translateX(-120%);animation:shine 3.2s infinite}
+@keyframes shine{0%,60%{transform:translateX(-120%)}100%{transform:translateX(120%)}}
+.btn-ghost{background:#fff;border:1px solid var(--line);color:var(--ink)}
+.btn-wa{background:#22c55e;color:#fff;box-shadow:0 10px 24px rgba(34,197,94,.3)}
+/* NAV */
+header{position:sticky;top:0;z-index:60;background:rgba(247,245,242,.86);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 0}
+.logo{font-family:Sora;font-weight:800;font-size:22px;text-decoration:none}.logo span{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.navlinks{display:flex;gap:6px;flex-wrap:wrap;align-items:center}
+.navlinks a{text-decoration:none;font-weight:600;font-size:14px;padding:10px 12px;border-radius:999px;min-height:40px;display:inline-flex;align-items:center}
+.navlinks a:hover{background:#fff}
+.navlinks a.admin{background:var(--ink);color:#fff}
+/* HERO */
+.hero{position:relative;padding:56px 0 30px;overflow:hidden}
+.hero::before{content:"";position:absolute;width:560px;height:560px;border-radius:50%;background:radial-gradient(circle,rgba(6,182,212,.20),transparent 65%);top:-200px;right:-120px;animation:drift 9s ease-in-out infinite alternate}
+.hero::after{content:"";position:absolute;width:480px;height:480px;border-radius:50%;background:radial-gradient(circle,rgba(124,58,237,.16),transparent 65%);bottom:-220px;left:-120px;animation:drift 11s ease-in-out infinite alternate-reverse}
+@keyframes drift{from{transform:translate(0,0) scale(1)}to{transform:translate(-36px,28px) scale(1.08)}}
+.hero-grid{position:relative;z-index:2;display:grid;grid-template-columns:1.05fr .95fr;gap:30px;align-items:center}
+.pill{display:inline-flex;gap:8px;align-items:center;background:#fff;border:1px solid var(--line);padding:8px 14px;border-radius:999px;font-size:13px;font-weight:700}
+.hero h1{font-size:clamp(38px,6vw,64px);line-height:1.02;letter-spacing:-.02em;margin:16px 0 14px}
+.hero p.lead{font-size:17px;color:var(--muted);line-height:1.65;max-width:520px}
+.hero-cta{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}
+.hero-img{border-radius:28px;overflow:hidden;box-shadow:var(--shadow);transform:rotate(1.2deg);animation:floaty 6s ease-in-out infinite}
+@keyframes floaty{0%,100%{transform:rotate(1.2deg) translateY(0)}50%{transform:rotate(1.2deg) translateY(-10px)}}
+.hero-img img{width:100%;height:420px;object-fit:cover}
+.hero-badge{position:absolute}
+/* MARQUEE */
+.marquee{margin:26px 0 6px;background:var(--ink);color:#fff;overflow:hidden;padding:13px 0;transform:rotate(-.6deg) scale(1.02)}
+.marquee-track{display:flex;gap:44px;white-space:nowrap;animation:mq 26s linear infinite;font-family:Sora;font-weight:700;letter-spacing:.06em;font-size:14px;width:max-content}
+@keyframes mq{to{transform:translateX(-50%)}}
+/* SECTIONS */
+section{padding:52px 0 8px}
+.sec-head{max-width:640px;margin-bottom:22px}
+.sec-head h2{font-size:clamp(26px,4vw,38px);letter-spacing:-.01em}
+.sec-head p{color:var(--muted);line-height:1.6}
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease}
+.reveal.in{opacity:1;transform:none}
+/* OFFER BANNER */
+.offer-banner{background:var(--grad);color:#fff;border-radius:22px;padding:22px 24px;display:flex;justify-content:space-between;gap:14px;align-items:center;flex-wrap:wrap;box-shadow:var(--shadow)}
+.offer-banner h3{font-size:22px}.offer-banner p{margin:4px 0 0;opacity:.92}
+/* CATEGORIES */
+.cat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.cat-card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:20px;cursor:pointer;transition:transform .35s,box-shadow .35s;text-align:left}
+.cat-card:hover{transform:translateY(-6px) rotate(-.4deg);box-shadow:var(--shadow)}
+.cat-card .ic{font-size:30px}.cat-card h3{margin:8px 0 4px;font-size:17px}.cat-card p{margin:0;color:var(--muted);font-size:14px}
+/* FILTERS + CATALOGUE */
+.filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px}
+.chip{border:1px solid var(--line);background:#fff;border-radius:999px;padding:9px 16px;cursor:pointer;font-weight:600}
+.chip.on{background:var(--grad);color:#fff;border-color:transparent}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.pcard{background:var(--card);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;transition:transform .35s,box-shadow .35s}
+.pcard:hover{transform:translateY(-7px);box-shadow:var(--shadow)}
+.pcard img{width:100%;height:210px;object-fit:cover}
+.pcard .body{padding:16px}
+.pcard h3{font-size:16px}.price{font-family:Sora;font-weight:800;font-size:19px;margin:6px 0}
+.meta{color:var(--muted);font-size:13px;line-height:1.55}
+.dots{display:flex;gap:6px;margin:8px 0}.dot{width:16px;height:16px;border-radius:50%;border:2px solid #fff;box-shadow:0 0 0 1px #ddd}
+.pcard .row{display:flex;gap:8px;margin-top:10px}.pcard .row .btn{flex:1;padding:10px;font-size:14px;min-height:44px}
+/* TRY-ON */
+.studio{position:relative;background:linear-gradient(180deg,#fdfcfa,#f1ede6);border:1px solid var(--line);border-radius:30px;overflow:hidden;padding:22px 14px 18px;min-height:640px}
+.bigword{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:Sora;font-weight:800;font-size:clamp(110px,24vw,300px);letter-spacing:.04em;color:rgba(20,22,40,.055);pointer-events:none;user-select:none}
+.tabs{position:relative;z-index:5;display:flex;gap:8px;flex-wrap:wrap;justify-content:center}
+.tab{border:1px solid rgba(255,255,255,.7);background:rgba(255,255,255,.55);backdrop-filter:blur(12px);border-radius:999px;padding:10px 16px;font-weight:700;cursor:pointer;box-shadow:0 8px 20px rgba(20,22,40,.06)}
+.tab.on{background:var(--ink);color:#fff}
+.stage{position:relative;height:430px;margin-top:8px;transition:opacity .38s ease}
+.stage.fading{opacity:0}
+.model-wrap{position:absolute;left:50%;top:8px;transform:translateX(-50%);width:210px;z-index:3;text-align:center}
+.model-wrap img.model{width:210px;height:330px;object-fit:cover;object-position:top;border-radius:120px 120px 18px 18px;box-shadow:0 24px 40px rgba(20,22,40,.18)}
+.floor{width:250px;height:36px;margin:6px auto 0;background:radial-gradient(ellipse at center,rgba(20,22,40,.28),transparent 68%);border-radius:50%}
+.feet{position:absolute;left:50%;bottom:40px;transform:translateX(-50%);z-index:4;width:190px;text-align:center;background:rgba(255,255,255,.55);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.85);border-radius:20px;padding:8px;box-shadow:0 16px 34px rgba(20,22,40,.16)}
+.feet .fv{font-size:11px;font-weight:800;letter-spacing:.05em;color:var(--muted);text-transform:uppercase}
+.feet img{width:100%;height:76px;object-fit:cover;border-radius:14px;margin-top:4px}
+.feet small{display:inline-block;margin-top:6px;font-weight:700;font-size:12px}
+.orbit{position:absolute;inset:0;z-index:2;pointer-events:none}
+.ocard{position:absolute;width:158px;background:rgba(255,255,255,.62);backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,.8);border-radius:18px;padding:10px;pointer-events:auto;cursor:pointer;box-shadow:0 16px 34px rgba(20,22,40,.12);text-align:left}
+.ocard img{width:100%;height:82px;object-fit:cover;border-radius:12px}
+.ocard b{display:block;font-size:13px;margin-top:7px;line-height:1.3}
+.ocard span{font-size:12px;color:var(--muted);font-weight:700}
+.ocard .try{display:block;margin-top:7px;background:var(--grad);color:#fff;text-align:center;border-radius:999px;padding:7px;font-size:12px;font-weight:800}
+.tray{position:relative;z-index:5;margin:6px auto 0;max-width:560px;background:rgba(255,255,255,.6);backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,.85);border-radius:999px;padding:10px 16px;display:flex;align-items:center;gap:12px;justify-content:center;flex-wrap:wrap;box-shadow:0 14px 30px rgba(20,22,40,.10)}
+.tray img{width:52px;height:38px;object-fit:cover;border-radius:10px}
+/* STATS */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.stat{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:22px;text-align:center}
+.stat b{font-family:Sora;font-size:32px;display:block;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.stat span{color:var(--muted);font-size:14px;font-weight:600}
+.why{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.why .w{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:20px}
+.why .w:hover{transform:translateY(-4px)} .why .w{transition:transform .3s}
+.visit{background:var(--ink);color:#fff;border-radius:26px;padding:30px;display:grid;grid-template-columns:1.2fr .8fr;gap:20px;align-items:center}
+.visit p{color:#c9ccd8;line-height:1.65}
+footer{padding:36px 0 90px;color:var(--muted);font-size:14px}
+footer a{font-weight:700}
+.wa-float{position:fixed;right:16px;bottom:16px;z-index:80;width:60px;height:60px;border-radius:50%;background:#22c55e;color:#fff;display:flex;align-items:center;justify-content:center;font-size:28px;text-decoration:none;box-shadow:0 14px 32px rgba(34,197,94,.45);animation:pulse 2s infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(34,197,94,.5)}70%{box-shadow:0 0 0 16px rgba(34,197,94,0)}100%{box-shadow:0 0 0 0 rgba(34,197,94,0)}}
+/* ===== WEBFORGE SECTIONS (cream design language) ===== */
+.wf{background:#f6f1e7;border:1px solid #e8e0cf;border-radius:28px;padding:26px 22px;color:#141414;overflow:hidden}
+.wf .kicker{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:#8a8378;font-weight:700}
+.wf h2{font-size:clamp(24px,3.6vw,34px);text-transform:uppercase;letter-spacing:.01em;color:#111}
+.wf .sub{color:#6f6a5f;font-size:14px;line-height:1.6;max-width:560px}
+.wf .pname{font-family:Sora,sans-serif;font-weight:800;text-transform:uppercase;letter-spacing:.02em;color:#111}
+.wf .plab{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:#8a8378;font-weight:700}
+.wf .pprice{font-family:Sora,sans-serif;font-weight:800;font-size:20px;color:#111}
+.wf .pillbtn{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:#111;color:#fff;border:0;border-radius:999px;padding:12px 22px;font-weight:700;cursor:pointer;min-height:46px;text-decoration:none}
+.wf .pillbtn.light{background:#fff;color:#111;border:1px solid #ddd5c2}
+.wf .sizebox{min-width:44px;height:44px;padding:0 10px;border:1px solid #cfc7b2;background:#fff;border-radius:12px;font-weight:700;cursor:pointer}
+.wf .sizebox.on{background:#111;color:#fff;border-color:#111}
+.wf .swatch{width:26px;height:26px;border-radius:50%;border:2px solid #fff;box-shadow:0 0 0 1px #cfc7b2;cursor:pointer;padding:0;min-height:26px}
+.wf .swatch.on{box-shadow:0 0 0 2px #111}
+/* Wheel */
+.wheel-wrap{display:grid;grid-template-columns:1.25fr .75fr;gap:20px;align-items:center;margin-top:10px}
+.wheel-stage{position:relative;height:380px;cursor:grab;touch-action:pan-y;user-select:none}
+.wheel-stage:active{cursor:grabbing}
+.wheel-ellipse{position:absolute;left:50%;top:52%;width:78%;height:120px;transform:translate(-50%,-50%);border:2px dashed rgba(20,20,20,.18);border-radius:50%}
+.wheel-item{position:absolute;width:170px;margin-left:-85px;margin-top:-70px;background:#fff;border:1px solid #e8e0cf;border-radius:18px;padding:10px;box-shadow:0 16px 34px rgba(60,50,20,.13);cursor:pointer;text-align:left;transition:opacity .25s}
+.wheel-item img{width:100%;height:96px;object-fit:cover;border-radius:12px;pointer-events:none}
+.wheel-item b{display:block;font-size:12px;text-transform:uppercase;margin-top:7px;line-height:1.3;color:#111}
+.wheel-item span{font-size:12px;color:#8a8378;font-weight:700}
+.wheel-thumbs{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
+.wheel-thumbs button{width:58px;height:48px;border-radius:12px;overflow:hidden;border:2px solid transparent;padding:0;cursor:pointer;background:#fff;min-height:48px}
+.wheel-thumbs button.on{border-color:#111}
+.wheel-thumbs img{width:100%;height:100%;object-fit:cover}
+.wheel-count{font-family:Sora,sans-serif;font-weight:800;font-size:15px;color:#111}
+.wheel-count span{color:#8a8378}
+/* Rail */
+.rail-stage{position:relative;height:300px;margin-top:6px}
+.rail-stage svg{position:absolute;inset:0;width:100%;height:100%}
+.rail-item{position:absolute;width:138px;margin-left:-69px;margin-top:-64px;background:#fff;border:1px solid #e8e0cf;border-radius:16px;padding:8px;cursor:pointer;box-shadow:0 12px 26px rgba(60,50,20,.12);transition:transform .35s ease,opacity .35s ease;text-align:left;z-index:2}
+.rail-item img{width:100%;height:76px;object-fit:cover;border-radius:10px;pointer-events:none}
+.rail-item b{display:block;font-size:11px;text-transform:uppercase;margin-top:6px;line-height:1.3;color:#111}
+.rail-item span{font-size:11px;color:#8a8378;font-weight:700}
+.rail-info{display:flex;gap:16px;align-items:center;justify-content:space-between;flex-wrap:wrap;background:#fff;border:1px solid #e8e0cf;border-radius:18px;padding:16px 18px;margin-top:8px}
+/* Looks */
+.looks-head{display:flex;justify-content:space-between;gap:12px;align-items:flex-end;flex-wrap:wrap}
+.looks-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:16px;transition:opacity .22s ease}
+.looks-grid.fading{opacity:0}
+.look-card{background:#fff;border:1px solid #e8e0cf;border-radius:20px;overflow:hidden;cursor:pointer;text-align:left;padding:0;transition:transform .3s,opacity .3s,filter .3s;width:100%}
+.look-card img{width:100%;height:170px;object-fit:cover}
+.look-card .lb{padding:14px}
+.look-card h3{font-size:15px;text-transform:uppercase}
+.look-card p{margin:4px 0 0;color:#8a8378;font-size:13px}
+/* Modals */
+.modal{position:fixed;inset:0;z-index:120;background:rgba(18,16,10,.55);backdrop-filter:blur(6px);display:none;align-items:center;justify-content:center;padding:16px}
+.modal.open{display:flex}
+.modal-panel{background:#fbf8f1;border-radius:26px;max-width:860px;width:100%;max-height:92vh;overflow:auto;padding:24px;position:relative;color:#141414}
+.modal-panel .x{position:absolute;top:14px;right:14px;width:42px;height:42px;border-radius:50%;border:1px solid #ddd5c2;background:#fff;font-size:18px;cursor:pointer;min-height:42px;z-index:2}
+.qv-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.qv-grid img.main{width:100%;height:320px;object-fit:cover;border-radius:20px}
+.piece{display:flex;gap:12px;align-items:center;background:#fff;border:1px solid #e8e0cf;border-radius:16px;padding:10px;margin-top:10px}
+.piece img,.piece .pthumb{width:56px;height:48px;object-fit:cover;border-radius:10px;flex:none}
+.piece .pthumb{display:flex;align-items:center;justify-content:center;font-family:Sora;font-weight:800;color:#fff;font-size:15px}
+.piece .grow{flex:1}.piece b{display:block;font-size:14px;text-transform:uppercase}
+.piece span{font-size:13px;color:#8a8378;font-weight:700}
+.piece .addb{background:#111;color:#fff;border:0;border-radius:999px;padding:9px 16px;font-weight:700;cursor:pointer;min-height:40px}
+.piece .addb.added{background:#e8e0cf;color:#111}
+@media(max-width:860px){.wheel-wrap,.qv-grid{grid-template-columns:1fr}.wheel-stage{height:330px}.wheel-item{width:138px;margin-left:-69px}.wheel-item img{height:76px}.rail-stage{height:270px}.rail-item{width:112px;margin-left:-56px}.rail-item img{height:60px}.looks-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){.looks-grid{grid-template-columns:1fr}}
+/* ADMIN */
+.adminbox{background:#fff;border:1px solid var(--line);border-radius:24px;padding:22px;box-shadow:var(--shadow)}
+.adminbox input,.adminbox select,.adminbox textarea{width:100%;border:1px solid var(--line);border-radius:12px;padding:10px 12px;background:#fff}
+.fgrid{display:grid;grid-template-columns:1fr 1fr;gap:10px}.fgrid .full{grid-column:1/-1}
+table{width:100%;border-collapse:collapse;font-size:14px}th,td{padding:9px 8px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+.mini{padding:7px 12px;border-radius:999px;border:1px solid var(--line);background:#fff;cursor:pointer;font-weight:700;min-height:36px}
+.mini.danger{background:#fef2f2;color:#b91c1c;border-color:#fecaca}
+.note{background:#fffbeb;border:1px solid #fde68a;border-radius:14px;padding:12px 14px;font-size:14px}
+@media(max-width:860px){.hero-grid,.visit{grid-template-columns:1fr}.grid,.cat-grid,.why{grid-template-columns:1fr 1fr}.stats{grid-template-columns:1fr 1fr}.hero-img img{height:300px}.navlinks a{padding:9px 8px;font-size:13px}.ocard{width:128px}.ocard img{height:64px}.model-wrap{width:168px}.model-wrap img.model{width:168px;height:272px}.stage{height:392px}.feet{bottom:52px;width:140px}.feet img{width:140px;height:60px}}
+@media(max-width:640px){.logo{white-space:nowrap;font-size:19px}.navlinks a:not(.admin){display:none}.nav{padding:10px 0}}
+@media(max-width:520px){.grid,.cat-grid,.why{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
+/* ===== Commerce: cart, orders, tracking, reviews ===== */
+.pcard{position:relative}
+.bdg{position:absolute;top:10px;left:10px;z-index:3;background:#111;color:#fff;font-size:11px;font-weight:800;padding:5px 10px;border-radius:999px;letter-spacing:.05em;text-transform:uppercase}
+.bdg.pre{background:#b45309}.bdg.out{background:#b91c1c}
+button[disabled]{opacity:.45!important;cursor:not-allowed!important}
+.shop-tools{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px;align-items:center}
+.shop-tools input[type=search]{flex:1;min-width:170px;border:1px solid var(--line);border-radius:999px;padding:10px 16px;background:#fff;min-height:44px}
+.shop-tools select{border:1px solid var(--line);border-radius:999px;padding:10px 14px;background:#fff;min-height:44px;font-weight:600}
+.cart-navbtn{position:relative;background:var(--ink);color:#fff;border:0;border-radius:999px;padding:10px 16px;font-weight:700;cursor:pointer;min-height:40px}
+.cart-count{position:absolute;top:-6px;right:-6px;background:#dc2626;color:#fff;font-size:11px;font-weight:800;min-width:21px;height:21px;border-radius:999px;display:none;align-items:center;justify-content:center;padding:0 5px}
+.cart-count.show{display:flex}
+.drawer{position:fixed;top:0;right:0;height:100dvh;width:min(400px,94vw);background:#fbf8f1;z-index:140;box-shadow:-18px 0 44px rgba(20,20,20,.25);display:none;flex-direction:column;color:#141414}
+.drawer.open{display:flex;animation:drawerIn .32s ease}
+@keyframes drawerIn{from{transform:translateX(46px);opacity:.5}to{transform:none;opacity:1}}
+.drawer .dhead{display:flex;justify-content:space-between;align-items:center;padding:18px;border-bottom:1px solid #e8e0cf}
+.drawer .dbody{flex:1;overflow:auto;padding:14px 18px}
+.drawer .dfoot{padding:16px 18px;border-top:1px solid #e8e0cf;background:#fff}
+.scrim{position:fixed;inset:0;background:rgba(18,16,10,.45);z-index:135;display:none}
+.scrim.open{display:block}
+.citem{display:flex;gap:10px;background:#fff;border:1px solid #e8e0cf;border-radius:14px;padding:10px;margin-bottom:10px;align-items:center}
+.citem img{width:54px;height:46px;object-fit:cover;border-radius:10px;flex:none}
+.qtybtn{width:32px;height:32px;min-height:32px;border-radius:50%;border:1px solid #cfc7b2;background:#fff;font-weight:800;cursor:pointer;padding:0}
+.fld{width:100%;border:1px solid #cfc7b2;border-radius:12px;padding:11px 12px;background:#fff;margin-bottom:10px;min-height:44px}
+.oitem{display:flex;gap:10px;align-items:center;background:#fff;border:1px solid #e8e0cf;border-radius:14px;padding:10px;margin-bottom:8px}
+.oitem img{width:50px;height:42px;object-fit:cover;border-radius:10px;flex:none}
+.tl{display:flex;margin-top:16px;flex-wrap:wrap}
+.tl .step{flex:1;min-width:70px;text-align:center;position:relative;padding-top:22px;font-size:12px;font-weight:700;color:#8a8378}
+.tl .step::before{content:"";position:absolute;top:4px;left:50%;transform:translateX(-50%);width:14px;height:14px;border-radius:50%;background:#ddd5c2;z-index:1}
+.tl .step::after{content:"";position:absolute;top:10px;left:calc(-50% + 8px);width:calc(100% - 16px);height:2px;background:#ddd5c2}
+.tl .step:first-child::after{display:none}
+.tl .step.done{color:#111}.tl .step.done::before{background:#22c55e}.tl .step.done::after{background:#22c55e}
+.rev-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.rev-card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:20px}
+.rev-card .stars{color:#f59e0b;font-size:16px;letter-spacing:2px}
+table.sg{width:100%;border-collapse:collapse;font-size:14px}table.sg th,table.sg td{padding:8px;border-bottom:1px solid #e8e0cf;text-align:center}
+.looks-grid{display:flex;gap:14px;overflow-x:auto;overflow-y:hidden;padding:8px 2px 16px;scroll-snap-type:x proximity;-webkit-overflow-scrolling:touch;scrollbar-width:thin}
+.look-card{flex:0 0 248px;width:248px;scroll-snap-align:center}
+.look-card.sel{outline:3px solid #111;outline-offset:2px}
+.rail-stage{cursor:grab}.rail-stage:active{cursor:grabbing}
+.obadge{background:#dc2626;color:#fff;font-size:11px;font-weight:800;border-radius:999px;padding:2px 9px;vertical-align:middle}
+.ordrow{background:#fff;border:1px solid var(--line);border-radius:14px;padding:12px 14px;margin-bottom:10px;font-size:14px;text-align:left}
+.ordrow select{width:auto;min-height:36px;padding:6px 10px}
+@media(max-width:860px){.rev-grid{grid-template-columns:1fr}}
+@media(max-width:520px){.look-card{flex-basis:216px;width:216px}}
+</style>
+</head>
+<body>
+<header><div class="wrap nav">
+<a class="logo" href="#top">ZAIBI <span>SHOES</span></a>
+<nav class="navlinks">
+<a href="#wheel">Wheel</a><a href="#shop">Shop</a><a href="#tryon">Try-On</a><a href="#looks">Looks</a><a href="#why">Why Zaibi</a><a href="#visit">Visit Us</a>
+<button class="cart-navbtn" id="cartBtn" aria-label="Open cart">🛒 Cart<span class="cart-count" id="cartCount">0</span></button>
+<a class="admin" href="#admin">Admin Panel</a>
+</nav></div></header>
+
+<main id="top">
+<!-- HERO -->
+<div class="hero"><div class="wrap hero-grid">
+<div>
+<span class="pill">👟 Ladies + Gents Footwear • Cantt Chowk, Abbottabad</span>
+<h1>Step out in style with <span class="grad-text">Zaibi Shoes</span></h1>
+<p class="lead">Sneakers, formal shoes, Peshawari chappal, school shoes, heels aur sandals — har roz nayi arrivals. Pehle online dekho, phir WhatsApp par order karo ya shop par aa kar try karo.</p>
+<div class="hero-cta">
+<a class="btn btn-grad" href="#shop">Shop Collection ↓</a>
+<a class="btn btn-wa" href="https://wa.me/923114456551?text=Assalamualaikum!%20Mujhe%20shoes%20ki%20maloomat%20chahiye." target="_blank" rel="noopener">💬 WhatsApp: 0311-4456551</a>
+<a class="btn btn-ghost" href="#tryon">✨ Virtual Try-On</a>
+</div>
+<p class="meta" style="margin-top:14px">📘 Facebook page “Zaibi Shoes” — ~13K followers, rozana nayi product reels.</p>
+</div>
+<div class="hero-img"><img src="assets/hero.jpg" alt="Colourful sneakers collection at Zaibi Shoes"></div>
+</div></div>
+
+<!-- MARQUEE -->
+<div class="marquee" aria-hidden="true"><div class="marquee-track" id="mq"></div></div>
+
+<div class="wrap">
+<!-- OFFERS (admin-managed) -->
+<section id="offers"><div id="offerArea"></div></section>
+
+<!-- DRAG-TO-ORBIT WHEEL -->
+<section id="wheel"><div class="wf">
+<p class="kicker">Featured — Drag to Spin</p>
+<h2>The Hero Wheel</h2>
+<p class="sub">Shoes ko ellipse par drag karke ghumayein — jo shoe sab se aage ayega, wahi sab se bara aur saaf dikhega. Us par click karein to quick-view khul jayega.</p>
+<div class="wheel-wrap">
+<div class="wheel-stage" id="wheelStage"><div class="wheel-ellipse"></div><div id="wheelItems"></div></div>
+<div>
+<p class="plab" id="wheelCat">—</p>
+<h3 class="pname" id="wheelName" style="font-size:24px;margin:6px 0">—</h3>
+<p class="pprice" id="wheelPrice">—</p>
+<p class="plab" style="margin:14px 0 8px">Select Size</p>
+<div style="display:flex;gap:8px;flex-wrap:wrap" id="wheelSizes"></div>
+<div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:18px">
+<button class="pillbtn" id="wheelView">Quick View</button>
+<button class="pillbtn" style="background:#22c55e" id="wheelWa">Order Now</button>
+<button class="pillbtn light" id="wheelCart">Add to Cart</button>
+</div>
+<div style="display:flex;align-items:center;gap:14px;margin-top:18px"><span class="wheel-count" id="wheelCount">01 <span>/ 05</span></span><span class="plab">← Drag to rotate →</span></div>
+<div class="wheel-thumbs" id="wheelThumbs"></div>
+</div>
+</div>
+</div></section>
+
+<!-- CATEGORIES -->
+<section id="categories"><div class="sec-head reveal"><h2>Har qadam ke liye <span class="grad-text">category</span></h2><p>Apni pasand ki category chuno — catalogue aur Virtual Try-On dono usi category par aa jayenge.</p></div>
+<div class="cat-grid" id="catGrid"></div></section>
+
+<!-- CATALOGUE -->
+<section id="shop"><div class="sec-head reveal"><h2>Latest <span class="grad-text">Collection</span></h2><p>Demo prices hain — asal rates aur stock WhatsApp par confirm karein. Har product par seedha order button hai.</p></div>
+<div class="shop-tools">
+<input type="search" id="searchInput" placeholder="🔍 Search shoes — naam ya category likhein…" aria-label="Search products">
+<select id="sortSel" aria-label="Sort products"><option value="">Sort: Featured</option><option value="low">Price: Low to High</option><option value="high">Price: High to Low</option><option value="az">Name: A–Z</option></select>
+<button class="btn btn-ghost" id="sizeGuideBtn" type="button">📏 Size Guide</button>
+</div>
+<div class="filters" id="filters"></div>
+<div class="grid" id="productGrid"></div></section>
+
+<!-- CURVED HOVER RAIL -->
+<section id="rail"><div class="wf">
+<p class="kicker">The Collection — Hover the Rail</p>
+<h2>Curved Rail Picks</h2>
+<p class="sub">Ek patli curved rail par lage best sellers — kisi shoe par hover karein, wahi spotlight mein bara ho jayega aur baaki halke pad jayenge. Click par quick-view khulega.</p>
+<div class="rail-stage" id="railStage">
+<svg viewBox="0 0 1000 300" preserveAspectRatio="none" aria-hidden="true"><path d="M 10 235 Q 500 30 990 235" fill="none" stroke="rgba(20,20,20,.22)" stroke-width="2.5"/><path d="M 10 235 Q 500 30 990 235" fill="none" stroke="rgba(20,20,20,.08)" stroke-width="14"/></svg>
+<div id="railItems"></div>
+</div>
+<div class="rail-info">
+<div style="flex:1;min-width:220px"><p class="plab" id="railCat">—</p><h3 class="pname" id="railName" style="font-size:20px;margin:4px 0">—</h3><p style="margin:0;color:#6f6a5f;font-size:14px" id="railDesc">—</p></div>
+<div style="text-align:right"><p class="pprice" id="railPrice">—</p><button class="pillbtn" id="railView" style="margin-top:8px">Quick View</button></div>
+</div>
+</div></section>
+
+<!-- TRY-ON -->
+<section id="tryon"><div class="sec-head reveal"><h2>Virtual <span class="grad-text">Try-On Studio</span></h2><p>Model ke gird ghoomte cards mein se koi bhi shoe chuno — wahi shoe foran model ke paon mein aa jayega. Category badalna smooth fade ke sath hota hai.</p></div>
+<div class="studio">
+<div class="bigword">STEP</div>
+<div class="tabs" id="tryTabs"></div>
+<div class="stage" id="stage">
+<div class="orbit" id="orbit"></div>
+<div class="model-wrap">
+<img class="model" src="assets/model.jpg" alt="Model standing in the Zaibi Shoes try-on studio">
+<div class="floor"></div>
+</div>
+<div class="feet"><span class="fv">🔍 On the feet — close view</span><img id="feetImg" src="assets/sneaker1.jpg" alt="Close view of the currently tried-on shoe on the model's feet"><small id="feetName">—</small></div>
+</div>
+<div class="tray" id="tray"></div>
+</div></section>
+
+<!-- SHUFFLE GRID: TRY THE LOOK -->
+<section id="looks"><div class="wf">
+<div class="looks-head"><div><p class="kicker">Styled Combos — Shuffle Grid</p><h2>Try the Look</h2><p class="sub">Poora styled look — shoe ke sath matching socks aur accessories. Shuffle dabayein, looks nayi tartib mein aa jayenge. Kisi look par tap karein: har piece, price aur total saaf nazar ayega.</p></div>
+<button class="pillbtn" id="shuffleBtn">🔀 Shuffle Looks</button></div>
+<div class="looks-grid" id="looksGrid"></div>
+</div></section>
+
+<!-- WHY / STATS -->
+<section id="why"><div class="sec-head reveal"><h2>Why <span class="grad-text">Zaibi Shoes?</span></h2></div>
+<div class="stats reveal">
+<div class="stat"><b><span class="count" data-to="13">0</span>K+</b><span>Facebook followers</span></div>
+<div class="stat"><b><span class="count" data-to="6">0</span></b><span>Shoe categories</span></div>
+<div class="stat"><b><span class="count" data-to="12">0</span>+</b><span>Styles in this demo</span></div>
+<div class="stat"><b>Daily</b><span>New arrivals &amp; reels</span></div>
+</div>
+<div class="why" style="margin-top:14px">
+<div class="w reveal"><h3>👞 Ladies + Gents, sab ek jagah</h3><p class="meta">Family ki poori shopping ek hi shop se — bachon ke school shoes se le kar dulhan heels tak.</p></div>
+<div class="w reveal"><h3>🎬 Rozana nayi reels</h3><p class="meta">Facebook page par har roz naye designs ki video — jo pasand aye, WhatsApp par screenshot bhej kar order karein.</p></div>
+<div class="w reveal"><h3>📍 Cantt Chowk, asaan location</h3><p class="meta">Cantt Area ke bilkul markaz mein — aa kar size try karna sab se asaan.</p></div>
+</div></section>
+
+<!-- VISIT -->
+<section id="visit"><div class="visit reveal"><div>
+<h2>Visit Us — Cantt Chowk</h2>
+<p id="visitText">Zaibi Shoes, Cantt Chowk, Cantt Area, Abbottabad. Shop par aa kar apna size try karein, ya pehle WhatsApp par design confirm kar lein.</p>
+<p id="hoursText">⏰ Opening hours: Mon–Sun, 10:00 AM – 10:00 PM (demo)</p>
+</div><div style="display:grid;gap:10px">
+<a class="btn btn-wa" href="https://wa.me/923114456551" target="_blank" rel="noopener">💬 WhatsApp par baat karein</a>
+<a class="btn btn-ghost" href="https://www.google.com/maps/search/?api=1&query=Cantt+Chowk+Abbottabad" target="_blank" rel="noopener">🗺️ Directions — Cantt Chowk</a>
+</div></div></section>
+
+<!-- DELIVERY + PAYMENT INFO -->
+<section id="delivery"><div class="wf">
+<p class="kicker">Delivery &amp; Payment</p>
+<h2>Delivery &amp; Payment Info</h2>
+<div id="delInfo" style="margin-top:12px;font-size:15px;line-height:1.8"></div>
+<div id="payInfo" style="margin-top:8px;font-size:15px;line-height:1.8"></div>
+<p class="sub" style="margin-top:10px">Ye demo default rates hain — shop owner Admin Panel ki Settings se apne asal charges laga sakta hai.</p>
+</div></section>
+
+<!-- TRACK ORDER -->
+<section id="track"><div class="wf">
+<p class="kicker">Live Order Tracking</p>
+<h2>Track Your Order</h2>
+<p class="sub">Order karne par mila hua Order ID (masalan #1001) ya apna mobile number likhein — order ka status step-by-step nazar ayega.</p>
+<div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:14px">
+<input id="trackInput" class="fld" style="flex:1;min-width:200px;margin:0" placeholder="Order ID ya mobile number">
+<button class="pillbtn" id="trackBtn">Track Order</button>
+</div>
+<div id="trackResult"></div>
+</div></section>
+
+<!-- REVIEWS -->
+<section id="reviews"><div class="sec-head reveal"><h2>Customer <span class="grad-text">Reviews</span></h2><p>Hamare customers kya kehte hain — ye reviews Admin Panel se add/edit ho sakte hain.</p></div>
+<div class="rev-grid" id="revGrid"></div></section>
+
+<!-- ADMIN -->
+<section id="admin"><div class="sec-head reveal"><h2>Owner <span class="grad-text">Admin Panel</span></h2><p>Shop owner apne asal products, offers aur settings yahan se khud manage karega. Abhi demo data hai — jo tabdeeli yahan hogi, wohi foran storefront aur Try-On mein nazar ayegi.</p></div>
+<div class="adminbox">
+<div id="pinGate">
+<p><b>Demo login:</b> PIN darj karein (demo PIN: <b>1234</b>)</p>
+<div style="display:flex;gap:8px;flex-wrap:wrap"><input id="pinInput" type="password" inputmode="numeric" placeholder="PIN" style="max-width:200px"><button class="btn btn-grad" id="pinBtn">Login</button></div>
+<p id="pinMsg" class="meta"></p>
+</div>
+<div id="adminMain" style="display:none">
+<div class="note">✅ Logged in (demo). Changes isi browser mein save hoti hain (localStorage) aur site par foran apply hoti hain. Asal delivery mein yehi panel server ke sath hoga.</div>
+<h3 style="margin:18px 0 8px">➕ Add / Edit Product</h3>
+<form id="prodForm"><div class="fgrid">
+<input id="f_name" placeholder="Product name *" required>
+<input id="f_price" type="number" min="0" placeholder="Price PKR *" required>
+<select id="f_cat"></select>
+<input id="f_img" placeholder="Photo URL ya assets/… path (khali = default)">
+<input id="f_sizes" placeholder="Sizes e.g. 39,40,41,42">
+<input id="f_colours" placeholder="Colours (comma) e.g. Red:#e11d48, Black:#111">
+<select id="f_sold"><option value="">In Stock</option><option value="1">Sold Out</option></select>
+<select id="f_pre"><option value="">Regular Product</option><option value="1">Pre-Order</option></select>
+<input id="f_preNote" placeholder="Pre-order note e.g. Expected: 10 days">
+</div>
+<div style="display:flex;gap:8px;margin-top:10px;flex-wrap:wrap"><button class="btn btn-grad" type="submit" id="saveBtn">Save Product</button><button class="btn btn-ghost" type="button" id="cancelEdit" style="display:none">Cancel Edit</button></div>
+<input type="hidden" id="f_id"></form>
+<h3 style="margin:22px 0 8px">📦 Products</h3><div style="overflow-x:auto"><table><thead><tr><th>Photo</th><th>Name</th><th>Category</th><th>Price</th><th>Actions</th></tr></thead><tbody id="adminTable"></tbody></table></div>
+<h3 style="margin:22px 0 8px">🧾 Orders <span class="obadge" id="ordersBadge" style="display:none">0 New</span></h3>
+<p class="note">Demo note: only orders placed in this same browser appear here — every order also goes to the owner's WhatsApp, so no real order is ever lost.</p>
+<div id="ordersList" style="margin-top:12px"></div>
+<h3 style="margin:22px 0 8px">🎉 Offer / Banner</h3>
+<div class="fgrid"><input id="o_title" placeholder="Offer title"><input id="o_text" placeholder="Offer detail text"></div>
+<div style="margin-top:10px;display:flex;gap:8px;flex-wrap:wrap"><button class="btn btn-grad" id="offerSave">Save Offer</button><button class="btn btn-ghost" id="offerClear">Remove Offer</button></div>
+<h3 style="margin:22px 0 8px">⭐ Reviews</h3>
+<div class="fgrid"><input id="r_name" placeholder="Customer name"><input id="r_stars" type="number" min="1" max="5" placeholder="Stars 1–5"><input id="r_text" class="full" placeholder="Review text"></div>
+<div style="margin-top:10px"><button class="btn btn-grad" id="revAdd" type="button">Add Review</button></div>
+<div id="revAdminList" style="margin-top:12px"></div>
+<h3 style="margin:22px 0 8px">⚙️ Settings</h3>
+<div class="fgrid">
+<input id="s_name" placeholder="Shop name"><input id="s_wa" placeholder="WhatsApp number e.g. 0311-4456551">
+<input id="s_addr" placeholder="Address"><input id="s_hours" placeholder="Opening hours">
+<input id="s_delCity" placeholder="Delivery — Abbottabad city (charge · days)">
+<input id="s_delNation" placeholder="Delivery — Nationwide (charge · days)">
+<input id="s_payJazz" placeholder="JazzCash account details (optional — checkout par sirf tab dikhega jab bhara ho)">
+<input id="s_payEasy" placeholder="Easypaisa account details (optional)">
+</div>
+<div style="margin-top:10px"><button class="btn btn-grad" id="settingsSave">Save Settings</button> <button class="btn btn-ghost" id="resetBtn">Reset Demo Data</button></div>
+</div>
+</div></section>
+</div>
+</main>
+
+<footer><div class="wrap">
+<p><b id="footName">Zaibi Shoes</b> — Cantt Chowk, Cantt Area, Abbottabad • WhatsApp <a href="https://wa.me/923114456551">0311-4456551</a> • Facebook: Zaibi Shoes (~13K followers)</p>
+<p><a href="#admin">Admin Panel</a> (Owner login, demo PIN 1234) • Ye ek demo website hai — prices demo hain, asal rates WhatsApp par confirm karein.</p>
+<p style="margin-top:16px;font-weight:700;color:var(--ink)">Developed by Future AI Technologies © 2026 Zaibi Shoes. All Rights Reserved.</p>
+</div></footer>
+
+<a class="wa-float" href="https://wa.me/923114456551?text=Assalamualaikum!%20Zaibi%20Shoes%20se%20shoes%20chahiye." target="_blank" rel="noopener" aria-label="Chat on WhatsApp">💬</a>
+
+<!-- QUICK VIEW MODAL -->
+<div class="modal" id="qvModal" role="dialog" aria-modal="true"><div class="modal-panel wf" style="background:#fbf8f1">
+<button class="x" id="qvClose" aria-label="Close quick view">✕</button>
+<div class="qv-grid">
+<img class="main" id="qvImg" src="assets/sneaker1.jpg" alt="Product quick view">
+<div>
+<p class="plab" id="qvCat">—</p>
+<h3 class="pname" id="qvName" style="font-size:24px;margin:6px 0">—</h3>
+<p class="pprice" id="qvPrice">—</p>
+<p id="qvBadges" style="margin:6px 0"></p>
+<p style="color:#6f6a5f;line-height:1.6;font-size:14px" id="qvDesc">—</p>
+<p class="plab" style="margin:14px 0 8px">Sizes <button type="button" id="qvSizeGuide" style="background:none;border:0;color:#2563eb;font-weight:700;cursor:pointer;text-decoration:underline;min-height:24px;padding:0">Size guide</button></p>
+<div style="display:flex;gap:8px;flex-wrap:wrap" id="qvSizes"></div>
+<p class="plab" style="margin:14px 0 8px">Colours</p>
+<div style="display:flex;gap:8px;flex-wrap:wrap" id="qvColours"></div>
+<div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:20px">
+<button class="pillbtn" style="background:#22c55e" id="qvOrder">Order Now</button>
+<button class="pillbtn" id="qvCart">🛒 Add to Cart</button>
+<button class="pillbtn light" id="qvTry">Try in Studio</button>
+</div>
+<p style="font-size:12px;color:#8a8378;margin-top:12px">Demo price — asal rate aur stock WhatsApp par confirm karein.</p>
+<div style="margin-top:18px"><p class="plab">You may also like</p><div id="qvRelated"></div></div>
+</div>
+</div>
+</div></div>
+
+<!-- LOOK DETAIL MODAL -->
+<div class="modal" id="lookModal" role="dialog" aria-modal="true"><div class="modal-panel wf" style="background:#fbf8f1">
+<button class="x" id="lookClose" aria-label="Close look detail">✕</button>
+<div class="qv-grid">
+<div><img class="main" id="lookImg" src="assets/sneaker1.jpg" alt="Look main shoe"><h3 class="pname" id="lookTitle" style="font-size:22px;margin:14px 0 4px">—</h3><p style="color:#6f6a5f;font-size:14px;margin:0" id="lookTag">—</p></div>
+<div>
+<p class="plab">In This Look</p>
+<div id="lookPieces"></div>
+<div style="display:flex;justify-content:space-between;align-items:center;margin-top:16px;background:#fff;border:1px solid #e8e0cf;border-radius:16px;padding:14px 16px"><span class="plab">Total (selected)</span><span class="pprice" id="lookTotal">Rs 0</span></div>
+<button class="pillbtn" style="background:#22c55e;width:100%;margin-top:14px" id="lookOrder">🛒 Order Full Look — Ek Hi Order</button>
+<p style="font-size:12px;color:#8a8378;margin-top:10px">Pieces Add/Remove karke total badal sakte hain — order sirf selected pieces ka jayega.</p>
+</div>
+</div>
+</div></div>
+
+<!-- ORDER FORM MODAL -->
+<div class="modal" id="orderModal" role="dialog" aria-modal="true"><div class="modal-panel wf" style="background:#fbf8f1;max-width:640px">
+<button class="x" id="orderClose" aria-label="Close order form">✕</button>
+<div id="orderFormWrap">
+<p class="kicker">Place Your Order</p>
+<h3 class="pname" style="font-size:22px;margin:6px 0 12px">Order Form</h3>
+<div id="orderItems"></div>
+<form id="orderForm">
+<input class="fld" id="o_name" placeholder="Aap ka naam *" required>
+<input class="fld" id="o_phone" placeholder="Mobile number * (03xx-xxxxxxx)" required inputmode="tel">
+<input class="fld" id="o_addr" placeholder="Address / City *" required>
+<label class="plab" style="display:block;margin:4px 0 6px">Payment Method</label>
+<select class="fld" id="o_pay"><option>Cash on Delivery</option><option>JazzCash</option><option>Easypaisa</option></select>
+<p id="orderPayInfo" style="font-size:13px;color:#6f6a5f;margin:0 0 10px"></p>
+<textarea class="fld" id="o_note" rows="2" placeholder="Note (optional) — masalan size confirm karna hai"></textarea>
+<p id="orderDeliveryLine" style="font-size:13px;font-weight:700;color:#111;background:#fff;border:1px solid #e8e0cf;border-radius:12px;padding:10px 12px"></p>
+<div style="display:flex;justify-content:space-between;align-items:center;margin:12px 0"><span class="plab">Grand Total</span><span class="pprice" id="orderTotal">Rs 0</span></div>
+<button class="pillbtn" style="background:#22c55e;width:100%" type="submit">✅ Order Confirm Karein</button>
+</form>
+</div>
+<div id="orderSuccess" style="display:none;text-align:center;padding:10px 0">
+<div style="font-size:52px">✅</div>
+<h3 class="pname" style="font-size:24px;margin:8px 0">Order Mil Gaya!</h3>
+<p id="successText" style="color:#6f6a5f;line-height:1.7"></p>
+<a class="pillbtn" style="background:#22c55e" id="successWa" href="#" target="_blank" rel="noopener">💬 WhatsApp par Order Bhejein</a>
+<button class="pillbtn light" id="successClose" style="margin-top:10px">Band Karein</button>
+<p style="font-size:12px;color:#8a8378;margin-top:12px">Apna Order ID note kar lein — "Track Your Order" section se status dekh sakte hain.</p>
+</div>
+</div></div>
+
+<!-- SIZE GUIDE MODAL -->
+<div class="modal" id="sizeModal" role="dialog" aria-modal="true"><div class="modal-panel wf" style="background:#fbf8f1;max-width:560px">
+<button class="x" id="sizeClose" aria-label="Close size guide">✕</button>
+<p class="kicker">Shoe Size Guide</p>
+<h3 class="pname" style="font-size:22px;margin:6px 0 12px">Size Chart</h3>
+<table class="sg"><thead><tr><th>UK</th><th>EU</th><th>Pak</th><th>Foot Length (cm)</th></tr></thead>
+<tbody>
+<tr><td>5</td><td>38</td><td>38</td><td>24.1</td></tr>
+<tr><td>6</td><td>39</td><td>39</td><td>24.5</td></tr>
+<tr><td>6.5</td><td>40</td><td>40</td><td>25.0</td></tr>
+<tr><td>7</td><td>41</td><td>41</td><td>25.4</td></tr>
+<tr><td>7.5</td><td>42</td><td>42</td><td>25.7</td></tr>
+<tr><td>8</td><td>43</td><td>43</td><td>26.0</td></tr>
+<tr><td>9</td><td>44</td><td>44</td><td>26.7</td></tr>
+<tr><td>10</td><td>45</td><td>45</td><td>27.1</td></tr>
+<tr><td>11</td><td>46</td><td>46</td><td>27.6</td></tr>
+</tbody></table>
+<p style="font-size:13px;color:#6f6a5f;line-height:1.6">Paon ki lambai scale se naap kar apna size chunein. Bachon ke sizes ke liye shop par aa kar try karna behtareen hai — WhatsApp par bhi rehnumai mil jayegi.</p>
+</div></div>
+
+<!-- CART DRAWER -->
+<div class="scrim" id="cartScrim"></div>
+<aside class="drawer" id="cartDrawer" aria-label="Shopping cart">
+<div class="dhead"><h3 style="font-family:Sora">🛒 Aap ki Tokri (Cart)</h3><button class="mini" id="cartClose">✕ Band</button></div>
+<div class="dbody" id="cartItems"></div>
+<div class="dfoot"><div style="display:flex;justify-content:space-between;font-weight:800;font-size:17px;margin-bottom:12px"><span>Total</span><span id="cartTotal">Rs 0</span></div>
+<button class="pillbtn" style="background:#22c55e;width:100%" id="cartCheckout">Checkout — Order Karein</button></div>
+</aside>
+
+<script>
+var CATS=[
+ {id:'Sneakers',icon:'👟',desc:'Daily wear, sports aur college ke liye comfortable sneakers.'},
+ {id:'Formal',icon:'👞',desc:'Office aur events ke liye polished leather formal shoes.'},
+ {id:'Peshawari Chappal',icon:'🩴',desc:'Rawayti Peshawari chappal — mazboot aur stylish.'},
+ {id:'School Shoes',icon:'🎒',desc:'Bachon ke liye mazboot, saara din comfortable school shoes.'},
+ {id:'Ladies Heels',icon:'👠',desc:'Parties aur weddings ke liye elegant heels.'},
+ {id:'Sandals',icon:'👡',desc:'Garmiyon ke liye halki, hawa-daar sandals — ladies + gents.'}
+];
+var DEFAULT_PRODUCTS=[
+ {id:1,name:'Velocity Red Runner Sneakers',price:5499,cat:'Sneakers',img:'assets/sneaker1.jpg',sizes:'39,40,41,42,43',colours:[['Red','#dc2626'],['Black','#111827']]},
+ {id:2,name:'Tan Court Sneakers',price:4999,cat:'Sneakers',img:'assets/sneaker2.jpg',sizes:'40,41,42,43,44',colours:[['Tan','#b45309'],['Black','#111827']]},
+ {id:3,name:'Pastel Pop Sneakers',price:4599,cat:'Sneakers',img:'assets/sneaker3.jpg',sizes:'39,40,41,42',colours:[['Pastel','#c4b5fd'],['Yellow','#eab308']]},
+ {id:4,name:'Classic Brown Leather Oxford',price:7999,cat:'Formal',img:'assets/formal1.jpg',sizes:'40,41,42,43',colours:[['Brown','#78350f'],['Black','#111827']]},
+ {id:5,name:'Tan Monk-Strap Formal Shoes',price:7499,cat:'Formal',img:'assets/formal2.jpg',sizes:'40,41,42,43,44',colours:[['Tan','#b45309']]},
+ {id:6,name:'Original Peshawari Chappal — Brown',price:3499,cat:'Peshawari Chappal',img:'assets/chappal1.jpg',sizes:'40,41,42,43,44',colours:[['Brown','#92400e'],['Black','#111827']]},
+ {id:7,name:'Zalmi Style Peshawari Chappal',price:3999,cat:'Peshawari Chappal',img:'assets/chappal2.jpg',sizes:'40,41,42,43',colours:[['Tan','#d97706']]},
+ {id:8,name:'Chunky Comfort School Sneakers',price:2999,cat:'School Shoes',img:'assets/school1.jpg',sizes:'32,34,36,38,40',colours:[['Multi','#7c3aed'],['White','#f8fafc']]},
+ {id:9,name:'Floral Blue Party Heels',price:4299,cat:'Ladies Heels',img:'assets/heel1.jpg',sizes:'36,37,38,39,40',colours:[['Blue','#2563eb'],['Pink','#ec4899']]},
+ {id:10,name:'Classic Black Stiletto Heels',price:3999,cat:'Ladies Heels',img:'assets/heel2.jpg',sizes:'36,37,38,39',colours:[['Black','#111827']]},
+ {id:11,name:'Gents Leather Cross Sandals',price:2799,cat:'Sandals',img:'assets/sandal1.jpg',sizes:'40,41,42,43,44',colours:[['Brown','#78350f'],['Tan','#b45309']]},
+ {id:12,name:'Charcoal Casual Boots',price:5999,cat:'Formal',img:'assets/sandal2.jpg',sizes:'40,41,42,43,44',colours:[['Charcoal','#374151'],['Black','#111827']]}
+];
+var DEFAULT_OFFER={title:'🎉 Demo Offer: Flat 15% OFF',text:'Is hafte tamam sneakers par demo discount — asal offer shop se confirm karein. WhatsApp par screenshot bhejein!'};
+var DEFAULT_SETTINGS={name:'Zaibi Shoes',wa:'0311-4456551',addr:'Cantt Chowk, Cantt Area, Abbottabad',hours:'Mon–Sun, 10:00 AM – 10:00 PM'};
+function load(k,d){try{var v=localStorage.getItem(k);return v?JSON.parse(v):JSON.parse(JSON.stringify(d));}catch(e){return JSON.parse(JSON.stringify(d));}}
+function save(k,v){try{localStorage.setItem(k,JSON.stringify(v));}catch(e){}}
+var products=load('zaibi_products_v2',DEFAULT_PRODUCTS);
+var offer=load('zaibi_offer_v2',DEFAULT_OFFER);
+var settings=load('zaibi_settings_v2',DEFAULT_SETTINGS);
+settings=Object.assign({delCity:'Abbottabad city — Rs 200 · 1–2 days',delNation:'Nationwide — Rs 350 · 3–5 days',payJazz:'',payEasy:''},settings);
+products.forEach(function(p){if(p.soldOut===undefined)p.soldOut=false;if(p.preOrder===undefined)p.preOrder=false;if(p.preNote===undefined)p.preNote='';});
+var orders=load('zaibi_orders_v1',[]);
+var cart=load('zaibi_cart_v1',[]);
+var orderSeq=load('zaibi_order_seq_v1',1000);
+var DEFAULT_REVIEWS=[
+ {name:'Ahmed Raza',stars:5,text:'Cantt Chowk par best shoe shop! Sneakers ki quality aur price dono zabardast. Staff bohat cooperative hai.'},
+ {name:'Fatima Noor',stars:5,text:'Heels order ki thin WhatsApp par — size bilkul perfect aya. Delivery bhi time par ho gayi.'},
+ {name:'Bilal Ahmed',stars:4,text:'Peshawari chappal asal leather ki mili, bohat mazboot hai. Bachon ke school shoes bhi yahin se liye.'}
+];
+var reviews=load('zaibi_reviews_v1',DEFAULT_REVIEWS);
+function saveCommerce(){save('zaibi_orders_v1',orders);save('zaibi_cart_v1',cart);save('zaibi_order_seq_v1',orderSeq);save('zaibi_reviews_v1',reviews);}
+var waNum=(settings.wa||'0311-4456551').replace(/\D/g,''); if(waNum.indexOf('0')===0)waNum='92'+waNum.slice(1);
+function waLink(p){return 'https://wa.me/'+waNum+'?text='+encodeURIComponent('Assalamualaikum! Mujhe ye shoes chahiye:\n'+p.name+' — Rs '+p.price.toLocaleString()+' ('+p.cat+')\nSizes: '+p.sizes);}
+function fmt(n){return 'Rs '+Number(n).toLocaleString();}
+/* Marquee */
+(function(){var items='SNEAKERS ✦ FORMAL ✦ PESHAWARI CHAPPAL ✦ SCHOOL SHOES ✦ LADIES HEELS ✦ SANDALS ✦ DAILY NEW ARRIVALS ✦ ';document.getElementById('mq').innerHTML='<span>'+items.repeat(3)+'</span><span>'+items.repeat(3)+'</span>';})();
+/* Categories */
+var catGrid=document.getElementById('catGrid');
+catGrid.innerHTML=CATS.map(function(c){var n=products.filter(function(p){return p.cat===c.id;}).length;return '<button class="cat-card" data-cat="'+c.id+'"><span class="ic">'+c.icon+'</span><h3>'+c.id+'</h3><p>'+c.desc+'</p><p style="margin-top:6px;font-weight:700;color:var(--ink)">'+n+' styles →</p></button>';}).join('');
+catGrid.addEventListener('click',function(e){var b=e.target.closest('[data-cat]');if(!b)return;setFilter(b.dataset.cat);switchTryCat(b.dataset.cat);document.getElementById('shop').scrollIntoView({behavior:'smooth'});});
+/* Catalogue */
+var curFilter='All';
+var filtersEl=document.getElementById('filters');
+function renderFilters(){filtersEl.innerHTML=['All'].concat(CATS.map(function(c){return c.id;})).map(function(c){return '<button class="chip'+(c===curFilter?' on':'')+'" data-f="'+c+'">'+c+'</button>';}).join('');}
+filtersEl.addEventListener('click',function(e){var b=e.target.closest('[data-f]');if(b)setFilter(b.dataset.f);});
+function setFilter(f){curFilter=f;renderFilters();renderGrid();}
+var curSearch='',curSort='';
+function renderGrid(){
+ var list=products.slice();
+ if(curFilter!=='All')list=list.filter(function(p){return p.cat===curFilter;});
+ if(curSearch){var q=curSearch.toLowerCase();list=list.filter(function(p){return (p.name+' '+p.cat).toLowerCase().indexOf(q)>-1;});}
+ if(curSort==='low')list.sort(function(a,b){return a.price-b.price;});
+ if(curSort==='high')list.sort(function(a,b){return b.price-a.price;});
+ if(curSort==='az')list.sort(function(a,b){return a.name.localeCompare(b.name);});
+ document.getElementById('productGrid').innerHTML=list.length?list.map(function(p){
+  var bdg=p.soldOut?'<span class="bdg out">Sold Out</span>':(p.preOrder?'<span class="bdg pre">Pre-Order</span>':'');
+  var dis=p.soldOut?' disabled':'';
+  return '<article class="pcard">'+bdg+'<img src="'+p.img+'" alt="'+p.name+'" onerror="this.src=\'assets/sneaker1.jpg\'"><div class="body"><h3>'+p.name+'</h3><div class="price">'+fmt(p.price)+' <small style="font-size:11px;color:var(--muted)">(demo)</small></div><div class="meta">'+p.cat+' • Sizes: '+p.sizes+(p.preOrder&&p.preNote?'<br>⏳ '+p.preNote:'')+'</div><div class="dots">'+p.colours.map(function(c){return '<span class="dot" style="background:'+c[1]+'" title="'+c[0]+'"></span>';}).join('')+'</div><div class="row"><button class="btn btn-wa" data-order="'+p.id+'"'+dis+'>Order Now</button><button class="btn btn-grad" data-cart="'+p.id+'"'+dis+'>🛒 Add to Cart</button></div><div class="row"><button class="btn btn-ghost" data-view="'+p.id+'">Quick View</button><button class="btn btn-ghost" data-try="'+p.id+'">Try-On</button></div></div></article>';
+ }).join(''):'<p class="meta">Koi product nahi mila — search ya category badal kar dekhein, ya Admin Panel se add karein.</p>';
+}
+document.getElementById('productGrid').addEventListener('click',function(e){
+ var t=e.target.closest('[data-try]');if(t){var p=products.find(function(x){return x.id==t.dataset.try;});if(p){switchTryCat(p.cat,p.id);document.getElementById('tryon').scrollIntoView({behavior:'smooth'});}return;}
+ var v=e.target.closest('[data-view]');if(v){openQuickView(+v.dataset.view);return;}
+ var c=e.target.closest('[data-cart]');if(c&&!c.disabled){var pc=byId(+c.dataset.cart);if(pc)addToCart({pid:pc.id,name:pc.name,variant:'Size: '+(sizesOf(pc)[0]||''),price:pc.price,qty:1,img:pc.img,preOrder:!!pc.preOrder});return;}
+ var o=e.target.closest('[data-order]');if(o&&!o.disabled){var po=byId(+o.dataset.order);if(po)openOrderForm({mode:'single',items:[{pid:po.id,name:po.name,variant:'',price:po.price,qty:1,img:po.img,preOrder:!!po.preOrder}]});return;}
+});
+document.getElementById('searchInput').addEventListener('input',function(){curSearch=this.value.trim();renderGrid();});
+document.getElementById('sortSel').addEventListener('change',function(){curSort=this.value;renderGrid();});
+/* Offer + settings render */
+function renderOffer(){var el=document.getElementById('offerArea');if(offer&&offer.title){el.innerHTML='<div class="offer-banner reveal in"><div><h3>'+offer.title+'</h3><p>'+offer.text+'</p></div><a class="btn" style="background:#fff;color:var(--ink)" href="https://wa.me/'+waNum+'" target="_blank" rel="noopener">Offer Claim Karein</a></div>';}else{el.innerHTML='';}}
+function renderSettings(){document.getElementById('footName').textContent=settings.name;document.getElementById('visitText').textContent=settings.name+', '+settings.addr+'. Shop par aa kar apna size try karein, ya pehle WhatsApp par design confirm kar lein.';document.getElementById('hoursText').textContent='⏰ Opening hours: '+settings.hours;}
+/* TRY-ON */
+var tryCat='Sneakers',selectedId=null,orbitAngle=0,orbitCards=[];
+var tabsEl=document.getElementById('tryTabs'),orbitEl=document.getElementById('orbit'),stageEl=document.getElementById('stage');
+function renderTabs(){tabsEl.innerHTML=CATS.map(function(c){return '<button class="tab'+(c.id===tryCat?' on':'')+'" data-t="'+c.id+'">'+c.icon+' '+c.id+'</button>';}).join('');}
+tabsEl.addEventListener('click',function(e){var b=e.target.closest('[data-t]');if(b&&b.dataset.t!==tryCat)switchTryCat(b.dataset.t);});
+function tryList(){return products.filter(function(p){return p.cat===tryCat;});}
+function buildOrbit(){
+ orbitEl.innerHTML='';orbitCards=[];
+ tryList().forEach(function(p,i){
+  var d=document.createElement('button');d.className='ocard';
+  d.innerHTML='<img src="'+p.img+'" alt="'+p.name+'" onerror="this.src=\'assets/sneaker1.jpg\'"><b>'+p.name+'</b><span>'+fmt(p.price)+'</span><span class="try">👟 Try This On</span>';
+  d.addEventListener('click',function(){selectShoe(p.id);});
+  orbitEl.appendChild(d);orbitCards.push(d);
+ });
+ if(!selectedId||!tryList().some(function(p){return p.id===selectedId;})){var l=tryList();if(l.length)selectShoe(l[0].id,true);}
+}
+function selectShoe(id,silent){
+ selectedId=id;var p=products.find(function(x){return x.id===id;});if(!p)return;
+ document.getElementById('feetImg').src=p.img;document.getElementById('feetName').textContent=p.name+' • '+fmt(p.price);
+ var c=CATS.find(function(x){return x.id===tryCat;});
+ document.getElementById('tray').innerHTML='<span style="font-size:22px">'+(c?c.icon:'👟')+'</span><img src="'+p.img+'" alt=""><b style="font-size:14px">'+p.name+'</b><span class="dots" style="margin:0">'+p.colours.map(function(cc){return '<span class="dot" style="background:'+cc[1]+'" title="'+cc[0]+'"></span>';}).join('')+'</span><button class="btn btn-wa" style="min-height:38px;padding:8px 14px;font-size:13px" data-trayorder="'+p.id+'"'+(p.soldOut?' disabled':'')+'>'+(p.soldOut?'Sold Out':'Order This')+'</button>';
+ orbitCards.forEach(function(el,i){el.style.outline=(tryList()[i]&&tryList()[i].id===id)?'2px solid #2563eb':'none';});
+}
+function switchTryCat(cat,preselect){
+ if(cat===tryCat&&!preselect){return;}
+ stageEl.classList.add('fading');
+ setTimeout(function(){
+  tryCat=cat;selectedId=preselect||null;renderTabs();buildOrbit();
+  if(preselect)selectShoe(preselect,true);
+  stageEl.classList.remove('fading');
+ },380);
+}
+var reduced=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+function orbitTick(){
+ if(!reduced&&orbitCards.length){
+  orbitAngle+=0.0016;
+  var W=stageEl.clientWidth,H=stageEl.clientHeight;
+  orbitCards.forEach(function(el,i){
+   var a=orbitAngle+(i/orbitCards.length)*Math.PI*2;
+   var x=Math.cos(a),z=Math.sin(a);
+   var cx=W/2+x*(W*0.36)-el.offsetWidth/2;
+   var cy=H*0.44+z*36-el.offsetHeight/2;
+   var s=0.72+0.38*((z+1)/2);var op=0.45+0.55*((z+1)/2);
+   el.style.transform='translate('+cx+'px,'+cy+'px) scale('+s+')';el.style.left='0';el.style.top='0';el.style.opacity=op;el.style.zIndex=z>0?4:1;
+  });
+ }
+ requestAnimationFrame(orbitTick);
+}
+/* Count-up + reveals */
+var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target);}});},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
+var cio=new IntersectionObserver(function(es){es.forEach(function(en){if(!en.isIntersecting)return;cio.unobserve(en.target);var to=+en.target.dataset.to,t0=null;function step(ts){if(!t0)t0=ts;var p=Math.min((ts-t0)/1200,1);en.target.textContent=Math.round(to*p);if(p<1)requestAnimationFrame(step);}requestAnimationFrame(step);});},{threshold:.4});
+document.querySelectorAll('.count').forEach(function(el){cio.observe(el);});
+setTimeout(function(){document.querySelectorAll('.reveal').forEach(function(el){el.classList.add('in');});document.querySelectorAll('.count').forEach(function(el){if(el.textContent==='0')el.textContent=el.dataset.to;});},4000);
+/* ADMIN */
+document.getElementById('pinBtn').addEventListener('click',function(){
+ if(document.getElementById('pinInput').value==='1234'){document.getElementById('pinGate').style.display='none';document.getElementById('adminMain').style.display='block';fillAdmin();}
+ else{document.getElementById('pinMsg').textContent='❌ Ghalat PIN — demo PIN 1234 hai.';}
+});
+var catSel=document.getElementById('f_cat');catSel.innerHTML=CATS.map(function(c){return '<option>'+c.id+'</option>';}).join('');
+function fillAdmin(){
+ document.getElementById('adminTable').innerHTML=products.map(function(p){return '<tr><td><img src="'+p.img+'" style="width:56px;height:42px;object-fit:cover;border-radius:8px" alt=""></td><td><b>'+p.name+'</b><br><span class="meta">Sizes: '+p.sizes+'</span></td><td>'+p.cat+'</td><td>'+fmt(p.price)+'</td><td style="white-space:nowrap"><button class="mini" data-edit="'+p.id+'">Edit</button> <button class="mini danger" data-del="'+p.id+'">Delete</button></td></tr>';}).join('');
+ document.getElementById('o_title').value=offer?offer.title:'';document.getElementById('o_text').value=offer?offer.text:'';
+ document.getElementById('s_name').value=settings.name;document.getElementById('s_wa').value=settings.wa;document.getElementById('s_addr').value=settings.addr;document.getElementById('s_hours').value=settings.hours;
+ document.getElementById('s_delCity').value=settings.delCity||'';document.getElementById('s_delNation').value=settings.delNation||'';document.getElementById('s_payJazz').value=settings.payJazz||'';document.getElementById('s_payEasy').value=settings.payEasy||'';
+ if(typeof renderOrders==='function')renderOrders();
+ if(typeof renderReviewsAdmin==='function')renderReviewsAdmin();
+}
+document.getElementById('adminTable').addEventListener('click',function(e){
+ var ed=e.target.closest('[data-edit]'),dl=e.target.closest('[data-del]');
+ if(ed){var p=products.find(function(x){return x.id==ed.dataset.edit;});if(!p)return;
+  document.getElementById('f_id').value=p.id;document.getElementById('f_name').value=p.name;document.getElementById('f_price').value=p.price;document.getElementById('f_cat').value=p.cat;document.getElementById('f_img').value=p.img;document.getElementById('f_sizes').value=p.sizes;document.getElementById('f_colours').value=p.colours.map(function(c){return c[0]+':'+c[1];}).join(', ');
+  document.getElementById('f_sold').value=p.soldOut?'1':'';document.getElementById('f_pre').value=p.preOrder?'1':'';document.getElementById('f_preNote').value=p.preNote||'';
+  document.getElementById('saveBtn').textContent='Update Product';document.getElementById('cancelEdit').style.display='inline-flex';document.getElementById('prodForm').scrollIntoView({behavior:'smooth'});}
+ if(dl){products=products.filter(function(x){return x.id!=dl.dataset.del;});persistAll();}
+});
+document.getElementById('cancelEdit').addEventListener('click',function(){document.getElementById('prodForm').reset();document.getElementById('f_id').value='';document.getElementById('saveBtn').textContent='Save Product';this.style.display='none';});
+document.getElementById('prodForm').addEventListener('submit',function(e){e.preventDefault();
+ var cols=document.getElementById('f_colours').value.split(',').map(function(s){s=s.trim();if(!s)return null;var parts=s.split(':');return [parts[0].trim(),(parts[1]||'#888').trim()];}).filter(Boolean);
+ var data={name:document.getElementById('f_name').value.trim(),price:+document.getElementById('f_price').value||0,cat:document.getElementById('f_cat').value,img:document.getElementById('f_img').value.trim()||'assets/sneaker1.jpg',sizes:document.getElementById('f_sizes').value.trim()||'40,41,42',colours:cols.length?cols:[['Black','#111827']],soldOut:document.getElementById('f_sold').value==='1',preOrder:document.getElementById('f_pre').value==='1',preNote:document.getElementById('f_preNote').value.trim()};
+ var id=document.getElementById('f_id').value;
+ if(id){var p=products.find(function(x){return x.id==id;});Object.assign(p,data);}
+ else{data.id=Date.now();products.unshift(data);}
+ this.reset();document.getElementById('f_id').value='';document.getElementById('saveBtn').textContent='Save Product';document.getElementById('cancelEdit').style.display='none';
+ persistAll();
+});
+document.getElementById('offerSave').addEventListener('click',function(){offer={title:document.getElementById('o_title').value.trim(),text:document.getElementById('o_text').value.trim()};persistAll();});
+document.getElementById('offerClear').addEventListener('click',function(){offer={title:'',text:''};persistAll();fillAdmin();});
+document.getElementById('settingsSave').addEventListener('click',function(){settings={name:document.getElementById('s_name').value.trim()||settings.name,wa:document.getElementById('s_wa').value.trim()||settings.wa,addr:document.getElementById('s_addr').value.trim()||settings.addr,hours:document.getElementById('s_hours').value.trim()||settings.hours,delCity:document.getElementById('s_delCity').value.trim(),delNation:document.getElementById('s_delNation').value.trim(),payJazz:document.getElementById('s_payJazz').value.trim(),payEasy:document.getElementById('s_payEasy').value.trim()};waNum=settings.wa.replace(/\D/g,'');if(waNum.indexOf('0')===0)waNum='92'+waNum.slice(1);persistAll();});
+document.getElementById('resetBtn').addEventListener('click',function(){products=JSON.parse(JSON.stringify(DEFAULT_PRODUCTS));offer=JSON.parse(JSON.stringify(DEFAULT_OFFER));settings=JSON.parse(JSON.stringify(DEFAULT_SETTINGS));persistAll();fillAdmin();});
+function persistAll(){save('zaibi_products_v2',products);save('zaibi_offer_v2',offer);save('zaibi_settings_v2',settings);renderGrid();renderOffer();renderSettings();
+ catGrid.innerHTML=CATS.map(function(c){var n=products.filter(function(p){return p.cat===c.id;}).length;var old=catGrid.querySelector('[data-cat="'+c.id+'"] p:last-child');return '<button class="cat-card" data-cat="'+c.id+'"><span class="ic">'+c.icon+'</span><h3>'+c.id+'</h3><p>'+c.desc+'</p><p style="margin-top:6px;font-weight:700;color:var(--ink)">'+n+' styles →</p></button>';}).join('');
+ buildOrbit();if(typeof renderWheel==='function'){renderWheel();renderRail();setRail(Math.min(railActive,Math.max(0,railList().length-1)));renderLooks();}}
+/* ===== WEBFORGE: shared helpers ===== */
+var CATDESC={'Sneakers':'Halki, cushioned sole — rozana walk, college aur sports ke liye perfect grip.','Formal':'Premium leather finish — office, meetings aur events ke liye polished look.','Peshawari Chappal':'Asal rawayti silai, mazboot leather — shalwar kameez ke sath behtareen.','School Shoes':'Mazboot aur comfortable — bachon ke saara din school ke liye.','Ladies Heels':'Elegant heel, balanced grip — party aur wedding look ke liye.','Sandals':'Hawa-daar open design — garmiyon mein saara din sukoon.'};
+function descFor(p){return CATDESC[p.cat]||'Zaibi Shoes ki selected quality — Cantt Chowk shop par aa kar try karein.';}
+function sizesOf(p){return String(p.sizes||'').split(',').map(function(s){return s.trim();}).filter(Boolean);}
+function byId(id){return products.find(function(x){return x.id===id;});}
+/* ===== QUICK VIEW ===== */
+var qvId=null,qvSize=null,qvColour=null;
+function openQuickView(id){var p=byId(id);if(!p)return;qvId=id;qvSize=null;qvColour=p.colours&&p.colours.length?p.colours[0][0]:null;
+ document.getElementById('qvImg').src=p.img;document.getElementById('qvCat').textContent=p.cat+' — Zaibi Shoes';
+ document.getElementById('qvName').textContent=p.name;document.getElementById('qvPrice').textContent=fmt(p.price)+' (demo)';
+ document.getElementById('qvBadges').innerHTML=p.soldOut?'<span class="bdg out" style="position:static">Sold Out</span>':(p.preOrder?'<span class="bdg pre" style="position:static">Pre-Order</span>'+(p.preNote?' <span style="font-size:13px;font-weight:700">⏳ '+p.preNote+'</span>':''):'');
+ document.getElementById('qvDesc').textContent=descFor(p);
+ document.getElementById('qvSizes').innerHTML=sizesOf(p).map(function(s){return '<button class="sizebox" data-qs="'+s+'">'+s+'</button>';}).join('');
+ document.getElementById('qvColours').innerHTML=p.colours.map(function(c,i){return '<button class="swatch'+(i===0?' on':'')+'" title="'+c[0]+'" style="background:'+c[1]+'"></button>';}).join('');
+ document.getElementById('qvOrder').disabled=!!p.soldOut;document.getElementById('qvCart').disabled=!!p.soldOut;
+ renderRelated(p);
+ document.getElementById('qvModal').classList.add('open');}
+function renderRelated(p){
+ var rel=products.filter(function(x){return x.cat===p.cat&&x.id!==p.id;}).slice(0,3);
+ document.getElementById('qvRelated').innerHTML=rel.length?rel.map(function(r){
+  return '<div class="piece"><img src="'+r.img+'" alt=""><div class="grow"><b>'+r.name+'</b><span>'+fmt(r.price)+(r.soldOut?' • Sold Out':(r.preOrder?' • Pre-Order':''))+'</span></div><button class="addb" data-rel="'+r.id+'">View</button><button class="addb" data-reladd="'+r.id+'"'+(r.soldOut?' disabled style="opacity:.45"':'')+'>+ Cart</button></div>';
+ }).join(''):'<p style="font-size:13px;color:#8a8378">Is category mein aur items nahi.</p>';
+}
+document.getElementById('qvRelated').addEventListener('click',function(e){
+ var v=e.target.closest('[data-rel]');if(v){openQuickView(+v.dataset.rel);return;}
+ var a=e.target.closest('[data-reladd]');if(a&&!a.disabled){var p=byId(+a.dataset.reladd);if(p)addToCart({pid:p.id,name:p.name,variant:'Size: '+(sizesOf(p)[0]||''),price:p.price,qty:1,img:p.img,preOrder:!!p.preOrder});}
+});
+function qvVariant(){var parts=[];if(qvSize)parts.push('Size '+qvSize);if(qvColour)parts.push(qvColour);return parts.join(' · ');}
+document.getElementById('qvSizes').addEventListener('click',function(e){var b=e.target.closest('[data-qs]');if(!b)return;qvSize=b.dataset.qs;this.querySelectorAll('.sizebox').forEach(function(x){x.classList.toggle('on',x===b);});});
+document.getElementById('qvColours').addEventListener('click',function(e){var b=e.target.closest('.swatch');if(!b)return;qvColour=b.title;this.querySelectorAll('.swatch').forEach(function(x){x.classList.toggle('on',x===b);});});
+document.getElementById('qvClose').addEventListener('click',function(){document.getElementById('qvModal').classList.remove('open');});
+document.getElementById('qvModal').addEventListener('click',function(e){if(e.target===this)this.classList.remove('open');});
+document.getElementById('qvTry').addEventListener('click',function(){var p=byId(qvId);document.getElementById('qvModal').classList.remove('open');if(p){switchTryCat(p.cat,p.id);document.getElementById('tryon').scrollIntoView({behavior:'smooth'});}});
+/* ===== 1) DRAG-TO-ORBIT WHEEL ===== */
+var wheelAngle=-Math.PI/2,wheelEls=[],wheelSize=null;
+function wheelList(){return products.slice(0,5);}
+function renderWheel(){
+ var list=wheelList(),stage=document.getElementById('wheelStage'),box=document.getElementById('wheelItems');
+ box.innerHTML='';wheelEls=[];
+ list.forEach(function(p,i){
+  var d=document.createElement('button');d.className='wheel-item';d.setAttribute('aria-label',p.name);
+  d.innerHTML='<img src="'+p.img+'" alt="'+p.name+'" onerror="this.src=\'assets/sneaker1.jpg\'"><b>'+p.name+'</b><span>'+fmt(p.price)+'</span>';
+  d.addEventListener('click',function(){if(wheelMoved>6)return;openQuickView(p.id);});
+  box.appendChild(d);wheelEls.push(d);});
+ document.getElementById('wheelThumbs').innerHTML=list.map(function(p,i){return '<button data-wt="'+i+'" aria-label="Show '+p.name+'"><img src="'+p.img+'" alt=""></button>';}).join('');
+ layoutWheel._front=-1;layoutWheel();}
+function layoutWheel(){
+ var list=wheelList();if(!list.length)return;
+ var stage=document.getElementById('wheelStage'),W=stage.clientWidth,H=stage.clientHeight,rx=W*0.36,ry=86;
+ var front=0,frontZ=-2;
+ wheelEls.forEach(function(el,i){
+  var a=wheelAngle+(i/list.length)*Math.PI*2;
+  var x=Math.cos(a),z=Math.sin(a);
+  el.style.left=(W/2+x*rx)+'px';el.style.top=(H*0.52+z*ry)+'px';
+  var s=0.68+0.5*((z+1)/2);el.style.transform='translateY(-6px) scale('+s+')';
+  el.style.opacity=0.45+0.55*((z+1)/2);el.style.zIndex=z>0?5:2;el.style.filter=((z+1)/2>0.85)?'none':'saturate(.85)';
+  if(z>frontZ){frontZ=z;front=i;}});
+ var p=list[front];if(!p)return;
+ if(layoutWheel._front===front&&layoutWheel._n===list.length)return;
+ layoutWheel._front=front;layoutWheel._n=list.length;
+ document.getElementById('wheelCat').textContent=p.cat+' — Featured';
+ document.getElementById('wheelName').textContent=p.name;
+ document.getElementById('wheelPrice').textContent=fmt(p.price)+' (demo)';
+ document.getElementById('wheelCount').innerHTML=String(front+1).padStart(2,'0')+' <span>/ '+String(list.length).padStart(2,'0')+'</span>';
+ document.getElementById('wheelWa').onclick=function(){if(p.soldOut)return;openOrderForm({mode:'single',items:[{pid:p.id,name:p.name,variant:wheelSize?'Size '+wheelSize:'',price:p.price,qty:1,img:p.img,preOrder:!!p.preOrder}]});};
+ document.getElementById('wheelWa').disabled=!!p.soldOut;
+ document.getElementById('wheelCart').onclick=function(){if(p.soldOut)return;addToCart({pid:p.id,name:p.name,variant:wheelSize?'Size '+wheelSize:'',price:p.price,qty:1,img:p.img,preOrder:!!p.preOrder});};
+ document.getElementById('wheelCart').disabled=!!p.soldOut;
+ document.getElementById('wheelView').onclick=function(){openQuickView(p.id);};
+ var sz=sizesOf(p);if(!sz.includes(wheelSize))wheelSize=sz[0]||null;
+ document.getElementById('wheelSizes').innerHTML=sz.map(function(s){return '<button class="sizebox'+(s===wheelSize?' on':'')+'" data-ws="'+s+'">'+s+'</button>';}).join('');
+ document.querySelectorAll('#wheelThumbs button').forEach(function(b,i){b.classList.toggle('on',i===front);});}
+document.getElementById('wheelSizes').addEventListener('click',function(e){var b=e.target.closest('[data-ws]');if(!b)return;wheelSize=b.dataset.ws;this.querySelectorAll('.sizebox').forEach(function(x){x.classList.toggle('on',x===b);});});
+document.getElementById('wheelThumbs').addEventListener('click',function(e){var b=e.target.closest('[data-wt]');if(!b)return;var list=wheelList(),i=+b.dataset.wt;wheelAngle=-Math.PI/2-(i/list.length)*Math.PI*2+Math.PI/2;wheelAngle=Math.PI/2-(i/list.length)*Math.PI*2;layoutWheel();});
+var wheelDrag=false,wheelStartX=0,wheelStartA=0,wheelMoved=0;
+var wStage=document.getElementById('wheelStage');
+wStage.addEventListener('pointerdown',function(e){wheelDrag=true;wheelMoved=0;wheelStartX=e.clientX;wheelStartA=wheelAngle;wStage.setPointerCapture(e.pointerId);});
+wStage.addEventListener('pointermove',function(e){if(!wheelDrag)return;var dx=e.clientX-wheelStartX;wheelMoved=Math.max(wheelMoved,Math.abs(dx));wheelAngle=wheelStartA+dx/130;layoutWheel();});
+wStage.addEventListener('pointerup',function(){wheelDrag=false;setTimeout(function(){wheelMoved=0;},50);});
+wStage.addEventListener('pointercancel',function(){wheelDrag=false;});
+if(!reduced){setInterval(function(){if(!wheelDrag&&document.getElementById('wheelStage')){wheelAngle+=0.0018;layoutWheel();}},30);}
+/* ===== 2) CURVED HOVER RAIL ===== */
+var railActive=0;
+function railList(){return products.slice(0,7);}
+function renderRail(){
+ var list=railList(),box=document.getElementById('railItems');box.innerHTML='';
+ if(railActive>=list.length)railActive=0;
+ list.forEach(function(p,i){
+  var d=document.createElement('button');d.className='rail-item';d.setAttribute('aria-label',p.name);
+  d.innerHTML='<img src="'+p.img+'" alt="'+p.name+'" onerror="this.src=\'assets/sneaker1.jpg\'"><b>'+p.name+'</b><span>'+fmt(p.price)+'</span>';
+  (function(idx,pid){
+   d.addEventListener('mouseenter',function(){setRail(idx);railPause(2600);});
+   d.addEventListener('focus',function(){setRail(idx);railPause(4000);});
+   d.addEventListener('click',function(){if(railDragMoved)return;if(idx===railActive){openQuickView(pid);}else{setRail(idx);railPause(3200);}});
+  })(i,p.id);
+  box.appendChild(d);});
+ layoutRail();}
+function railPos(t,W,H,half){var pad=half*1.28+10;var x=pad+t*(W-2*pad);var y=H*0.78-Math.sin(t*Math.PI)*H*0.52;return [x,y];}
+function layoutRail(){
+ var stage=document.getElementById('railStage');if(!stage)return;var W=stage.clientWidth,H=stage.clientHeight;
+ var items=stage.querySelectorAll('.rail-item');
+ var half=items.length?items[0].offsetWidth/2:69;
+ items.forEach(function(el,i){
+  var t=items.length===1?0.5:((i/items.length)+railOffset)%1;var pos=railPos(t,W,H,half);
+  el.style.left=pos[0]+'px';el.style.top=pos[1]+'px';
+  var on=i===railActive;
+  el.style.transform='scale('+(on?1.22:0.92)+')';el.style.opacity=on?'1':'0.45';el.style.zIndex=on?6:2;
+  el.style.boxShadow=on?'0 22px 44px rgba(60,50,20,.28)':'0 12px 26px rgba(60,50,20,.12)';});}
+function setRail(i){railActive=i;var p=railList()[i];if(!p)return;
+ document.getElementById('railCat').textContent=p.cat+' — Rail Pick';
+ document.getElementById('railName').textContent=p.name;
+ document.getElementById('railDesc').textContent=descFor(p);
+ document.getElementById('railPrice').textContent=fmt(p.price)+' (demo)';
+ document.getElementById('railView').onclick=function(){openQuickView(p.id);};
+ layoutRail();}
+/* Rail auto-drift + drag/swipe (Part 1) */
+var railOffset=0,railPauseUntil=0,railDrag=null,railDragMoved=false;
+function railPause(ms){railPauseUntil=Date.now()+ms;}
+function railTick(){
+ if(!reduced&&Date.now()>railPauseUntil&&!railDrag){railOffset=(railOffset+0.00045)%1;layoutRail();}
+ requestAnimationFrame(railTick);}
+requestAnimationFrame(railTick);
+var railStageEl=document.getElementById('railStage');
+railStageEl.addEventListener('pointerdown',function(e){railDrag={x:e.clientX,y:e.clientY,off:railOffset,claim:false};railPause(4000);});
+railStageEl.addEventListener('pointermove',function(e){if(!railDrag)return;var dx=e.clientX-railDrag.x,dy=e.clientY-railDrag.y;
+ if(!railDrag.claim){if(Math.abs(dx)>9&&Math.abs(dx)>Math.abs(dy)*1.4){railDrag.claim=true;try{railStageEl.setPointerCapture(e.pointerId);}catch(err){}}else if(Math.abs(dy)>9){railDrag=null;return;}}
+ if(railDrag.claim){railDragMoved=true;railOffset=(((railDrag.off+dx/railStageEl.clientWidth)%1)+1)%1;layoutRail();}});
+function railDragEnd(){if(railDrag&&railDrag.claim){railPause(3500);setTimeout(function(){railDragMoved=false;},90);}railDrag=null;}
+railStageEl.addEventListener('pointerup',railDragEnd);
+railStageEl.addEventListener('pointercancel',railDragEnd);
+/* ===== 3) SHUFFLE GRID: TRY THE LOOK ===== */
+var LOOKS=[
+ {title:'College Day Look',tag:'Sneakers + socks + cap styling',shoeId:1,extra:[['Ankle Sports Socks (3 pairs)',499,'#2563eb'],['No-Show Cushion Socks',349,'#06b6d4']]},
+ {title:'Office Sharp Look',tag:'Formal shoes + leather care styling',shoeId:4,extra:[['Leather Shoe Polish Kit',899,'#78350f'],['Formal Dress Socks',449,'#111827']]},
+ {title:'Eid Traditional Look',tag:'Peshawari chappal + classic styling',shoeId:6,extra:[['Premium Shoe Horn',299,'#b45309'],['Leather Conditioner Cream',799,'#92400e']]},
+ {title:'Pastel Party Look',tag:'Pastel sneakers + pastel socks styling',shoeId:3,extra:[['Pastel Ankle Socks (2 pairs)',399,'#c4b5fd'],['White Laces — Extra Pair',249,'#f59e0b']]},
+ {title:'Wedding Guest Look',tag:'Heels + comfort pads styling',shoeId:9,extra:[['Heel Grip Cushion Pads',349,'#ec4899'],['Silk Shoe Bag',549,'#7c3aed']]},
+ {title:'Summer Easy Look',tag:'Leather sandals + care styling',shoeId:11,extra:[['Leather Strap Oil',649,'#d97706'],['Cotton Casual Socks',379,'#22c55e']]}
+];
+var lookOrder=LOOKS.map(function(_,i){return i;}),lookSel=null;
+function lookPieces(look){
+ var pieces=[];var shoe=byId(look.shoeId);
+ if(shoe)pieces.push({key:'shoe'+shoe.id,name:shoe.name,price:shoe.price,img:shoe.img,cat:shoe.cat});
+ look.extra.forEach(function(x,i){pieces.push({key:'x'+i,name:x[0],price:x[1],colour:x[2]});});
+ return pieces;}
+function renderLooks(){
+ var grid=document.getElementById('looksGrid');
+ grid.innerHTML=lookOrder.map(function(li,pos){
+  var look=LOOKS[li];var shoe=byId(look.shoeId);if(!shoe)return '';
+  var total=lookPieces(look).reduce(function(s,x){return s+x.price;},0);
+  var centre=(lookOrder.length-1)/2;var dist=Math.abs(pos-centre);var op=1-dist*0.16;var sc=1-dist*0.04;
+  return '<button class="look-card" data-look="'+li+'" style="opacity:'+op+';transform:scale('+sc+')"><img src="'+shoe.img+'" alt="'+look.title+'" onerror="this.src=\'assets/sneaker1.jpg\'"><div class="lb"><p class="plab">Look 0'+(pos+1)+'</p><h3>'+look.title+'</h3><p>'+look.tag+'</p><p style="color:#111;font-weight:800;margin-top:8px">Full look: '+fmt(total)+' (demo)</p></div></button>';
+ }).join('');}
+document.getElementById('looksGrid').addEventListener('click',function(e){var b=e.target.closest('[data-look]');if(!b)return;
+ var grid=document.getElementById('looksGrid');grid.querySelectorAll('.look-card').forEach(function(c){c.classList.remove('sel');});
+ b.classList.add('sel');b.scrollIntoView({behavior:'smooth',inline:'center',block:'nearest'});
+ setTimeout(function(){openLook(+b.dataset.look);},60);});
+document.getElementById('shuffleBtn').addEventListener('click',function(){
+ var grid=document.getElementById('looksGrid');
+ var first={};grid.querySelectorAll('.look-card').forEach(function(c){first[c.dataset.look]=c.getBoundingClientRect().left;});
+ for(var i=lookOrder.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));var t=lookOrder[i];lookOrder[i]=lookOrder[j];lookOrder[j]=t;}
+ renderLooks();
+ grid.querySelectorAll('.look-card').forEach(function(c){
+  var f=first[c.dataset.look];if(f===undefined)return;var dx=f-c.getBoundingClientRect().left;
+  if(!dx)return;var target=c.style.transform;
+  c.style.transition='none';c.style.transform='translateX('+dx+'px) '+target;
+  requestAnimationFrame(function(){requestAnimationFrame(function(){c.style.transition='transform .55s cubic-bezier(.22,.8,.3,1)';c.style.transform=target;});});
+ });
+ grid.scrollTo({left:0,behavior:'smooth'});});
+function openLook(li){
+ var look=LOOKS[li];var shoe=byId(look.shoeId);if(!shoe)return;
+ lookSel={look:look,pieces:lookPieces(look),on:{}};
+ lookSel.pieces.forEach(function(p){lookSel.on[p.key]=true;});
+ document.getElementById('lookImg').src=shoe.img;
+ document.getElementById('lookTitle').textContent=look.title;
+ document.getElementById('lookTag').textContent=look.tag;
+ renderLookPieces();document.getElementById('lookModal').classList.add('open');}
+function renderLookPieces(){
+ var box=document.getElementById('lookPieces');
+ box.innerHTML=lookSel.pieces.map(function(p){
+  var thumb=p.img?'<img src="'+p.img+'" alt="">':'<span class="pthumb" style="background:'+(p.colour||'#888')+'">'+p.name.charAt(0)+'</span>';
+  return '<div class="piece">'+thumb+'<div class="grow"><b>'+p.name+'</b><span>'+(p.cat?p.cat+' • ':'Styling piece • ')+fmt(p.price)+'</span></div><button class="addb'+(lookSel.on[p.key]?' added':'')+'" data-piece="'+p.key+'">'+(lookSel.on[p.key]?'✓ Added':'Add')+'</button></div>';
+ }).join('');
+ var total=lookSel.pieces.reduce(function(s,p){return s+(lookSel.on[p.key]?p.price:0);},0);
+ document.getElementById('lookTotal').textContent=fmt(total);}
+document.getElementById('lookPieces').addEventListener('click',function(e){var b=e.target.closest('[data-piece]');if(!b)return;lookSel.on[b.dataset.piece]=!lookSel.on[b.dataset.piece];renderLookPieces();});
+document.getElementById('lookClose').addEventListener('click',function(){document.getElementById('lookModal').classList.remove('open');});
+document.getElementById('lookModal').addEventListener('click',function(e){if(e.target===this)this.classList.remove('open');});
+document.addEventListener('keydown',function(e){if(e.key==='Escape'){document.getElementById('qvModal').classList.remove('open');document.getElementById('lookModal').classList.remove('open');}});
+window.addEventListener('resize',function(){layoutWheel();layoutRail();});
+/* INIT */
+renderFilters();renderGrid();renderOffer();renderSettings();renderTabs();buildOrbit();requestAnimationFrame(orbitTick);
+renderWheel();renderRail();setRail(0);renderLooks();
+</script>
+<script>
+/* ===== COMMERCE: CART + ORDERS + TRACKING + REVIEWS ===== */
+function variantText(it){return it.variant||'';}
+/* ---------- CART ---------- */
+function cartCountTotal(){return cart.reduce(function(s,i){return s+i.qty;},0);}
+function renderCart(){
+ var n=cartCountTotal(),badge=document.getElementById('cartCount');
+ badge.textContent=n;badge.classList.toggle('show',n>0);
+ var box=document.getElementById('cartItems');
+ if(!cart.length){box.innerHTML='<p style="color:#6f6a5f;line-height:1.7">Tokri khaali hai — koi shoe pasand aye to "Add to Cart" dabayein.</p>';}
+ else{box.innerHTML=cart.map(function(it,i){
+  return '<div class="citem"><img src="'+(it.img||'assets/sneaker1.jpg')+'" alt=""><div style="flex:1"><b style="font-size:14px">'+it.name+(it.preOrder?' <span style="color:#b45309">(PRE-ORDER)</span>':'')+'</b><br><span style="font-size:12px;color:#8a8378;font-weight:700">'+variantText(it)+'</span><br><span style="font-weight:800">'+fmt(it.price)+'</span></div><button class="qtybtn" data-cdec="'+i+'">−</button><b>'+it.qty+'</b><button class="qtybtn" data-cinc="'+i+'">+</button><button class="qtybtn" data-crm="'+i+'" title="Remove" style="color:#b91c1c">✕</button></div>';
+ }).join('');}
+ document.getElementById('cartTotal').textContent=fmt(cart.reduce(function(s,i){return s+i.price*i.qty;},0));
+}
+function addToCart(item){
+ var key=(item.pid||item.name)+'|'+(item.variant||'');
+ var ex=cart.find(function(i){return i.key===key;});
+ if(ex){ex.qty+=item.qty||1;}else{item.key=key;item.qty=item.qty||1;cart.push(item);}
+ saveCommerce();renderCart();openCart();
+}
+function openCart(){document.getElementById('cartDrawer').classList.add('open');document.getElementById('cartScrim').classList.add('open');}
+function closeCart(){document.getElementById('cartDrawer').classList.remove('open');document.getElementById('cartScrim').classList.remove('open');}
+document.getElementById('cartBtn').addEventListener('click',openCart);
+document.getElementById('cartClose').addEventListener('click',closeCart);
+document.getElementById('cartScrim').addEventListener('click',closeCart);
+document.getElementById('cartItems').addEventListener('click',function(e){
+ var inc=e.target.closest('[data-cinc]'),dec=e.target.closest('[data-cdec]'),rm=e.target.closest('[data-crm]');
+ if(inc){cart[+inc.dataset.cinc].qty++;}
+ else if(dec){var i=+dec.dataset.cdec;cart[i].qty--;if(cart[i].qty<1)cart.splice(i,1);}
+ else if(rm){cart.splice(+rm.dataset.crm,1);}else{return;}
+ saveCommerce();renderCart();
+});
+document.getElementById('cartCheckout').addEventListener('click',function(){
+ if(!cart.length)return;closeCart();
+ openOrderForm({mode:'cart',items:cart.map(function(i){return {pid:i.pid,name:i.name,variant:i.variant,price:i.price,qty:i.qty,img:i.img,preOrder:i.preOrder};})});
+});
+/* ---------- ORDER FORM ---------- */
+var orderCtx=null;
+function orderGrandTotal(){return orderCtx?orderCtx.items.reduce(function(s,i){return s+i.price*i.qty;},0):0;}
+function openOrderForm(ctx){
+ orderCtx=ctx;
+ document.getElementById('orderFormWrap').style.display='block';
+ document.getElementById('orderSuccess').style.display='none';
+ renderOrderItems();updOrderPayInfo();
+ document.getElementById('orderDeliveryLine').textContent='🚚 Delivery: '+settings.delCity+' | '+settings.delNation+' (delivery charges order par confirm honge)';
+ document.getElementById('orderModal').classList.add('open');
+}
+function renderOrderItems(){
+ var box=document.getElementById('orderItems');
+ box.innerHTML=orderCtx.items.map(function(it,i){
+  var sizeSel='';
+  if(it.pid){var p=byId(it.pid);if(p){var szs=sizesOf(p);var cur='';var m=/Size (\S+)/.exec(it.variant||'');if(m)cur=m[1];if(!cur&&szs.length)cur=szs[0];
+   sizeSel='<select data-osize="'+i+'" style="min-height:36px;border:1px solid #cfc7b2;border-radius:9px;padding:4px 8px;font-weight:700">'+szs.map(function(s){return '<option'+(s===cur?' selected':'')+'>'+s+'</option>';}).join('')+'</select>';}}
+  return '<div class="oitem"><img src="'+(it.img||'assets/sneaker1.jpg')+'" alt=""><div style="flex:1"><b style="font-size:14px">'+it.name+(it.preOrder?' <span style="color:#b45309">(PRE-ORDER)</span>':'')+'</b><br><span style="font-size:12px;color:#8a8378;font-weight:700">'+variantText(it)+'</span> '+sizeSel+'</div><button type="button" class="qtybtn" data-odec="'+i+'">−</button><b>'+it.qty+'</b><button type="button" class="qtybtn" data-oinc="'+i+'">+</button><b style="min-width:76px;text-align:right">'+fmt(it.price*it.qty)+'</b></div>';
+ }).join('');
+ document.getElementById('orderTotal').textContent=fmt(orderGrandTotal());
+}
+document.getElementById('orderItems').addEventListener('click',function(e){
+ var inc=e.target.closest('[data-oinc]'),dec=e.target.closest('[data-odec]');if(!inc&&!dec)return;
+ if(inc){orderCtx.items[+inc.dataset.oinc].qty++;}
+ else{var i=+dec.dataset.odec;orderCtx.items[i].qty--;if(orderCtx.items[i].qty<1){if(orderCtx.items.length>1)orderCtx.items.splice(i,1);else orderCtx.items[i].qty=1;}}
+ renderOrderItems();
+});
+document.getElementById('orderItems').addEventListener('change',function(e){
+ var s=e.target.closest('[data-osize]');if(!s)return;var it=orderCtx.items[+s.dataset.osize];
+ if(/Size \S+/.test(it.variant||''))it.variant=it.variant.replace(/Size \S+/,'Size '+s.value);
+ else it.variant=('Size '+s.value)+((it.variant)?' · '+it.variant:'');
+ renderOrderItems();
+});
+function updOrderPayInfo(){
+ var pay=document.getElementById('o_pay').value,el=document.getElementById('orderPayInfo');
+ if(pay==='JazzCash')el.textContent=settings.payJazz?('JazzCash: '+settings.payJazz):'JazzCash details order confirm honay par WhatsApp par share honge.';
+ else if(pay==='Easypaisa')el.textContent=settings.payEasy?('Easypaisa: '+settings.payEasy):'Easypaisa details order confirm honay par WhatsApp par share honge.';
+ else el.textContent='Payment delivery ke waqt cash — koi advance nahi.';
+}
+document.getElementById('o_pay').addEventListener('change',updOrderPayInfo);
+function buildWaText(o){
+ var lines=['Assalamualaikum! Mera order hai — '+settings.name,'Order ID: #'+o.id];
+ o.items.forEach(function(it){lines.push('• '+it.name+(it.variant?' ('+it.variant+')':'')+' × '+it.qty+' — Rs '+(it.price*it.qty).toLocaleString()+(it.preOrder?' [PRE-ORDER]':''));});
+ lines.push('Total: Rs '+o.total.toLocaleString());
+ lines.push('Naam: '+o.customer);lines.push('Mobile: '+o.phone);lines.push('Address: '+o.address);
+ lines.push('Payment: '+o.payment);if(o.note)lines.push('Note: '+o.note);
+ if(o.preOrder)lines.push('Ye PRE-ORDER hai.');
+ return lines.join('\n');
+}
+document.getElementById('orderForm').addEventListener('submit',function(e){
+ e.preventDefault();if(!orderCtx||!orderCtx.items.length)return;
+ orderSeq++;var oid=orderSeq;
+ var items=orderCtx.items.map(function(i){return {pid:i.pid||null,name:i.name,variant:i.variant||'',price:i.price,qty:i.qty,preOrder:!!i.preOrder};});
+ var o={id:oid,date:new Date().toLocaleString('en-GB'),customer:document.getElementById('o_name').value.trim(),phone:document.getElementById('o_phone').value.trim(),address:document.getElementById('o_addr').value.trim(),payment:document.getElementById('o_pay').value,note:document.getElementById('o_note').value.trim(),items:items,item:items.map(function(i){return i.name+' × '+i.qty;}).join(', '),variant:items.map(function(i){return i.variant;}).filter(Boolean).join(' | '),qty:items.reduce(function(s,i){return s+i.qty;},0),total:items.reduce(function(s,i){return s+i.price*i.qty;},0),status:'New',preOrder:items.some(function(i){return i.preOrder;})};
+ orders.unshift(o);saveCommerce();
+ if(orderCtx.mode==='cart'){cart=[];saveCommerce();renderCart();}
+ var wa='https://wa.me/'+waNum+'?text='+encodeURIComponent(buildWaText(o));
+ document.getElementById('successWa').href=wa;
+ document.getElementById('successText').innerHTML='Shukriya, <b>'+o.customer+'</b>! Aap ka Order ID hai <b>#'+o.id+'</b> — Total <b>'+fmt(o.total)+'</b>.'+(o.preOrder?'<br><b style="color:#b45309">⏳ Ye PRE-ORDER hai</b> — item ki availability note product par di gayi hai, shop WhatsApp par confirm karegi.':'')+'<br>Neeche wale button se order owner ke WhatsApp par bhej dein taake foran confirm ho jaye.';
+ document.getElementById('orderFormWrap').style.display='none';
+ document.getElementById('orderSuccess').style.display='block';
+ if(typeof renderOrders==='function')renderOrders();
+ this.reset();updOrderPayInfo();
+});
+document.getElementById('orderClose').addEventListener('click',function(){document.getElementById('orderModal').classList.remove('open');});
+document.getElementById('successClose').addEventListener('click',function(){document.getElementById('orderModal').classList.remove('open');});
+document.getElementById('orderModal').addEventListener('click',function(e){if(e.target===this)this.classList.remove('open');});
+/* Quick view + tray + look order buttons */
+document.getElementById('qvOrder').addEventListener('click',function(){var p=byId(qvId);if(!p||p.soldOut)return;document.getElementById('qvModal').classList.remove('open');openOrderForm({mode:'single',items:[{pid:p.id,name:p.name,variant:qvVariant(),price:p.price,qty:1,img:p.img,preOrder:!!p.preOrder}]});});
+document.getElementById('qvCart').addEventListener('click',function(){var p=byId(qvId);if(!p||p.soldOut)return;document.getElementById('qvModal').classList.remove('open');addToCart({pid:p.id,name:p.name,variant:qvVariant(),price:p.price,qty:1,img:p.img,preOrder:!!p.preOrder});});
+document.getElementById('tray').addEventListener('click',function(e){var b=e.target.closest('[data-trayorder]');if(!b||b.disabled)return;var p=byId(+b.dataset.trayorder);if(p)openOrderForm({mode:'single',items:[{pid:p.id,name:p.name,variant:'',price:p.price,qty:1,img:p.img,preOrder:!!p.preOrder}]});});
+document.getElementById('lookOrder').addEventListener('click',function(){
+ if(!lookSel)return;var items=lookSel.pieces.filter(function(p){return lookSel.on[p.key];}).map(function(p){
+  var shoe=p.img?byId(lookSel.look.shoeId):null;
+  return {pid:p.img?(lookSel.look.shoeId):null,name:p.name,variant:'',price:p.price,qty:1,img:p.img||'',preOrder:shoe?!!shoe.preOrder:false};});
+ if(!items.length)return;document.getElementById('lookModal').classList.remove('open');
+ openOrderForm({mode:'look',items:items});
+});
+/* ---------- ADMIN ORDERS ---------- */
+var ORDER_STATUSES=['New','Confirmed','Dispatched','Delivered','Cancelled'];
+function renderOrders(){
+ var list=document.getElementById('ordersList');if(!list)return;
+ var nw=orders.filter(function(o){return o.status==='New';}).length;
+ var badge=document.getElementById('ordersBadge');badge.style.display=nw?'inline-block':'none';badge.textContent=nw+' New';
+ if(!orders.length){list.innerHTML='<p class="meta">Abhi koi order nahi aya — website se pehla order ate hi yahan nazar ayega.</p>';return;}
+ list.innerHTML=orders.map(function(o){
+  return '<div class="ordrow"><div style="display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap"><b>#'+o.id+' — '+o.customer+'</b><span class="meta">'+o.date+'</span></div><div class="meta">📞 '+o.phone+' • '+o.address+'</div><div>'+o.items.map(function(i){return i.name+(i.variant?' ('+i.variant+')':'')+' × '+i.qty+(i.preOrder?' <b style="color:#b45309">[PRE-ORDER]</b>':'');}).join('<br>')+'</div><div style="display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap;margin-top:8px"><span>Qty: <b>'+o.qty+'</b> • Total: <b>'+fmt(o.total)+'</b> • '+o.payment+'</span><span><select data-ostatus="'+o.id+'">'+ORDER_STATUSES.map(function(s){return '<option'+(s===o.status?' selected':'')+'>'+s+'</option>';}).join('')+'</select> <button class="mini danger" data-odel="'+o.id+'">Delete</button></span></div></div>';
+ }).join('');
+}
+document.getElementById('ordersList').addEventListener('change',function(e){var s=e.target.closest('[data-ostatus]');if(!s)return;var o=orders.find(function(x){return x.id==s.dataset.ostatus;});if(o){o.status=s.value;saveCommerce();renderOrders();}});
+document.getElementById('ordersList').addEventListener('click',function(e){var d=e.target.closest('[data-odel]');if(!d)return;orders=orders.filter(function(x){return x.id!=d.dataset.odel;});saveCommerce();renderOrders();});
+/* ---------- TRACKING ---------- */
+document.getElementById('trackBtn').addEventListener('click',function(){
+ var q=document.getElementById('trackInput').value.trim(),box=document.getElementById('trackResult');
+ var o=null;
+ if(q){var num=q.replace(/\D/g,'');o=orders.find(function(x){return String(x.id)===num;})||orders.find(function(x){return x.phone.replace(/\D/g,'')===num&&num.length>=10;});}
+ if(!o){box.innerHTML='<p style="margin-top:14px;font-weight:700;color:#b91c1c">Is ID / number par koi order nahi mila. Order ID dobara check karein.</p>';return;}
+ var steps=['Received','Confirmed','Dispatched','Delivered'];
+ var idx=o.status==='New'?0:o.status==='Confirmed'?1:o.status==='Dispatched'?2:o.status==='Delivered'?3:-1;
+ var html='<div style="background:#fff;border:1px solid #e8e0cf;border-radius:16px;padding:16px;margin-top:14px"><b>Order #'+o.id+'</b> — '+o.item+'<br><span class="meta">'+o.date+' • Total '+fmt(o.total)+(o.preOrder?' • <b style="color:#b45309">PRE-ORDER</b>':'')+'</span>';
+ if(o.status==='Cancelled'){html+='<p style="font-weight:800;color:#b91c1c;margin:10px 0 0">❌ Ye order Cancel ho gaya hai.</p>';}
+ else{html+='<div class="tl">'+steps.map(function(s,i){return '<div class="step'+(i<=idx?' done':'')+'">'+(i<=idx?'✓ ':'')+s+'</div>';}).join('')+'</div>';}
+ box.innerHTML=html+'</div>';
+});
+/* ---------- REVIEWS ---------- */
+function starsStr(n){var s='';for(var i=0;i<5;i++)s+=i<n?'★':'☆';return s;}
+function renderReviews(){
+ document.getElementById('revGrid').innerHTML=reviews.length?reviews.map(function(r){return '<div class="rev-card"><div class="stars">'+starsStr(r.stars)+'</div><p style="line-height:1.65;margin:10px 0">"'+r.text+'"</p><b>'+r.name+'</b></div>';}).join(''):'<p class="meta">Abhi reviews nahi hain.</p>';
+}
+function renderReviewsAdmin(){
+ var el=document.getElementById('revAdminList');if(!el)return;
+ el.innerHTML=reviews.map(function(r,i){return '<div class="ordrow"><b>'+r.name+'</b> <span style="color:#f59e0b">'+starsStr(r.stars)+'</span><br><span class="meta">'+r.text+'</span> <button class="mini danger" data-rdel="'+i+'" style="float:right">Delete</button></div>';}).join('')||'<p class="meta">Koi review nahi.</p>';
+}
+document.getElementById('revAdd').addEventListener('click',function(){
+ var n=document.getElementById('r_name').value.trim(),t=document.getElementById('r_text').value.trim(),s=Math.min(5,Math.max(1,+document.getElementById('r_stars').value||5));
+ if(!n||!t)return;reviews.unshift({name:n,stars:s,text:t});saveCommerce();renderReviews();renderReviewsAdmin();
+ document.getElementById('r_name').value='';document.getElementById('r_text').value='';document.getElementById('r_stars').value='';
+});
+document.getElementById('revAdminList').addEventListener('click',function(e){var d=e.target.closest('[data-rdel]');if(!d)return;reviews.splice(+d.dataset.rdel,1);saveCommerce();renderReviews();renderReviewsAdmin();});
+/* ---------- SIZE GUIDE + INFO ---------- */
+function openSizeGuide(){document.getElementById('sizeModal').classList.add('open');}
+document.getElementById('sizeGuideBtn').addEventListener('click',openSizeGuide);
+document.getElementById('qvSizeGuide').addEventListener('click',openSizeGuide);
+document.getElementById('sizeClose').addEventListener('click',function(){document.getElementById('sizeModal').classList.remove('open');});
+document.getElementById('sizeModal').addEventListener('click',function(e){if(e.target===this)this.classList.remove('open');});
+function renderInfo(){
+ document.getElementById('delInfo').innerHTML='🚚 <b>Delivery:</b> '+settings.delCity+'<br>🚚 <b>Delivery:</b> '+settings.delNation;
+ document.getElementById('payInfo').innerHTML='💳 <b>Payment:</b> Cash on Delivery · JazzCash · Easypaisa accepted.'+(settings.payJazz?'<br>JazzCash: '+settings.payJazz:'')+(settings.payEasy?'<br>Easypaisa: '+settings.payEasy:'');
+}
+var _persistAll=persistAll;
+persistAll=function(){_persistAll();renderInfo();renderCart();if(document.getElementById('adminMain').style.display!=='none'){renderOrders();renderReviewsAdmin();}};
+document.addEventListener('keydown',function(e){if(e.key==='Escape'){document.getElementById('orderModal').classList.remove('open');document.getElementById('sizeModal').classList.remove('open');closeCart();}});
+/* INIT */
+renderCart();renderInfo();renderReviews();
+</script>
+</body>
+</html>
