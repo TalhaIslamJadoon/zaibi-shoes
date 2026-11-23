@@ -316,6 +316,19 @@ section .wf svg path{stroke:rgba(217,255,0,.4)}
 table th,table td{border-bottom-color:#2e2e28}
 @media(prefers-reduced-motion:reduce){.hero-img{animation:none}}
 </style>
+<style>
+/* TO-FIX2 2026-11-24: mobile try-on restack (shoes) */
+
+@media(max-width:640px){
+  /* Mobile studio stacks: model, feet close-up, then the orbit in its own band —
+     cards no longer slide behind the model or off the stage edges. */
+  .stage{height:auto;display:flex;flex-direction:column;align-items:center;padding-top:4px}
+  .model-wrap{position:relative;left:auto;top:auto;transform:none;order:1}
+  .feet{position:relative;left:auto;bottom:auto;transform:none;order:2;margin-top:10px}
+  .orbit{position:relative;inset:auto;order:3;width:100%;height:216px;margin-top:8px}
+}
+
+</style>
 </head>
 <body>
 <header><div class="wrap nav">
@@ -751,12 +764,13 @@ var reduced=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 function orbitTick(){
  if(!reduced&&orbitCards.length){
   orbitAngle+=0.0016;
-  var W=stageEl.clientWidth,H=stageEl.clientHeight;
+  var W=orbitEl.clientWidth||stageEl.clientWidth,H=orbitEl.clientHeight||stageEl.clientHeight;
   orbitCards.forEach(function(el,i){
    var a=orbitAngle+(i/orbitCards.length)*Math.PI*2;
    var x=Math.cos(a),z=Math.sin(a);
-   var cx=W/2+x*(W*0.36)-el.offsetWidth/2;
-   var cy=H*0.44+z*36-el.offsetHeight/2;
+   var rx=Math.min(W*0.36,Math.max(28,W/2-76));
+   var cx=W/2+x*rx-el.offsetWidth/2;
+   var cy=(H<300?H*0.5+z*Math.min(36,H*0.08):H*0.44+z*36)-el.offsetHeight/2;
    var s=0.72+0.38*((z+1)/2);var op=0.45+0.55*((z+1)/2);
    el.style.transform='translate('+cx+'px,'+cy+'px) scale('+s+')';el.style.left='0';el.style.top='0';el.style.opacity=op;el.style.zIndex=z>0?4:1;
   });
